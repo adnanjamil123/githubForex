@@ -1,0 +1,70 @@
+DELIMITER $$
+
+CREATE PROCEDURE add_new_users(
+UserID VARCHAR(250),
+f_name CHAR(35), 
+l_name CHAR(35), 
+user_email_auth VARCHAR(250), 
+user_password VARCHAR(250), 
+country CHAR(50), 
+city_town CHAR(50), 
+preferred_language CHAR(50), 
+phone_no VARCHAR(250), 
+date_of_birth DATE, 
+street_number INT, 
+residential_address VARCHAR(150), 
+postal_zip_code INT, 
+find_us_detail CHAR(15),
+account_type CHAR(15), 
+account_base_currency CHAR(15), 
+account_leverage DECIMAL(15,4),
+expected_investment_balance DECIMAL(15,4))
+
+
+BEGIN
+
+DECLARE message VARCHAR(50);
+DECLARE account_actual_balance DECIMAL(15,4);
+DECLARE account_virtual_balance DECIMAL(15,4);
+DECLARE account_promotion_status CHAR(4);  
+DECLARE account_status CHAR(15); 
+
+IF EXISTS(SELECT * FROM users WHERE user_email = user_email_auth)
+
+THEN
+
+			SET message = 'NOT REGISTERED';
+
+			SELECT message;
+
+ELSE
+
+		SET account_actual_balance = 0;
+		SET account_virtual_balance = 0;
+		SET account_promotion_status = 'NO';
+		SET account_status = 'NOT VERIFIED';
+		
+		INSERT INTO users(UserID, f_name, l_name, user_email, user_password, country, city_town, preferred_language, phone_no, date_of_birth, street_number, residential_address, postal_zip_code, find_us_detail) VALUES(UserID, f_name, l_name, user_email_auth, user_password, country, city_town, preferred_language, phone_no, date_of_birth, street_number, residential_address, postal_zip_code, find_us_detail);
+        
+        		INSERT INTO customer_account(account_type, account_status, account_created_at, account_base_currency, account_leverage, account_actual_balance, account_virtual_balance, expected_investment_balance, account_promotion_status, UserID) VALUES(account_type, account_status, NOW(), account_base_currency, account_leverage, account_actual_balance, account_virtual_balance, expected_investment_balance, account_promotion_status, UserID);
+
+				SET message = 'REGISTERED';
+
+				SELECT message;
+
+END IF;
+
+END $$
+
+
+
+
+
+
+
+
+----------------- FOR EXECUTE -----------------
+
+
+
+CALL add_new_users('ADNAN', 'JAMIL', 'adnanjamil@gmail.com', 'Abc12345@', 'SAUDIA', 'MAKKAH','ENGLISH', '034335345345', '1992-04-27', 2, 'MAKKAH', 34455, 'GOOGLE','STANDARD', 'SAR',1000);

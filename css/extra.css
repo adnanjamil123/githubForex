@@ -1,0 +1,16 @@
+.live-chat 
+   {
+       position: absolute;
+       float: right;
+       right: 10px;
+       padding: 3px;
+       color: white;
+       margin-top: 2px;
+       margin-right: 100px;
+        background-color: #0b5f59;
+         text-decoration: none;
+         width: 100px;
+         text-align: center;
+         border-radius: 5px;
+         border: 1px blue solid;
+   }

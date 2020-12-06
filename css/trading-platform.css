@@ -1,0 +1,501 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   
+   
+}
+
+
+#loading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.7;
+    background-color: #fff;
+    z-index: 99;
+    text-align: center;
+ }
+ 
+ #loading-image {
+   position: absolute;
+   top: 100px;
+   left: 240px;
+   z-index: 100;
+ }
+ 
+.container
+{
+    /* max-width: 1500px; */
+    height: 100%;
+    width: 100%;
+    
+}
+.center
+{
+    position: absolute;
+    display: flex;
+    top: 50px;
+}
+.table-all
+{
+    
+    width: 400px;
+    height: 400px;
+    border: 3px whitesmoke solid;
+    margin-left: 5px;
+    
+}
+table
+{
+    border-collapse: collapse;
+    
+    
+}
+table caption
+{
+    width: 397px;
+    text-align: left;
+    background:whitesmoke;
+    padding: 3px;
+    border-bottom: 1px black;
+  
+}
+table th{
+    width:132px;
+    text-align: center;
+    border-bottom: 4px whitesmoke solid;
+    cursor: default;
+    
+}
+table td{
+    width:132px;
+    text-align: center;
+    
+    border-bottom: 2px whitesmoke solid;
+}
+tr:hover td
+{
+    cursor: pointer;
+    background: whitesmoke;
+    font-weight: bold;
+    
+}
+.trade-window
+{
+    width: 320px;
+    height: 340px;
+    left: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right:auto;
+    background: whitesmoke;
+    border: 2px solid grey;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    float: top;
+    top: 200px;
+    z-index: 10;
+    
+}
+.buy-sell
+{
+    width: 300px;
+    height: 50px;
+    position: relative;
+    margin: auto;
+    top:30px;
+   
+
+}
+.buy-sell ul
+{
+    display: flex;
+}
+.buy-sell ul li{
+    width: 140px;
+    height: 50px;
+    margin: auto 5px;
+    border: 1px black solid;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2px;
+    background:white;
+}
+.buy-sell a
+{
+    text-decoration: none;
+    
+}
+
+.sell{
+    color: red;
+}
+.buy{
+    color: blue;
+}
+.place-order
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right:auto;
+    bottom: 10px;
+    padding: 0px 10px;
+}
+.place-order ul li{
+list-style: none;
+text-align: center;
+background: white;
+cursor: pointer;
+padding: 2px;
+color: blue;
+}
+.spread-high-low p
+{
+    position: relative;
+    top: 60px;
+    text-align: center;
+}
+.buy-sell .focus{
+    border: 2px solid green;
+}
+.autostop
+{
+    width: 70%;
+    margin: auto;
+    position: relative;
+    top: 70px;
+    padding-left: 10px;
+    text-align: center;
+    font-size:20px;
+    border: 1px black solid;
+    border-radius: 5px;
+   
+}
+
+.auto-stop
+{
+    position: relative;
+    left: 20px;
+    top: 70px;
+
+}  
+.input-checkbox
+{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    top: 5px;
+}
+.stop-loss-div, .take-profit-div
+{
+    display: inline;
+    position: relative;
+}
+.stop-loss-input, .take-profit-input
+{
+    height: 20px;
+    width: 100px;
+}
+.stop-loss-div
+{
+    left: 13px;
+}
+
+.title
+{
+    position: relative;
+    border-top-right-radius: 10px;
+    width: 310px;
+    background: #c7c5c5;
+    padding:2px 5px;
+    display:flex;
+}
+.title p
+{
+    display: block;
+    width: 250px;
+    margin-left: 5px;
+}
+.close
+{
+    display: block;
+    width: 50px;
+    
+    float: right;
+    right: 0px;
+    top: 0px;
+   
+}
+.top
+{
+    width: 100%;
+    height: 50px;
+    background: #000000;
+    display: flex;
+}
+.top h1{
+    color: #c7c5c5;
+    margin-top: 3px;
+}
+.order{
+    background: white;
+    width: 1520px;
+    height: 200px;
+    border: 3px whitesmoke solid;
+    position: absolute;
+    top:450px;
+    margin: auto;
+}
+.order-menu
+{
+    background: whitesmoke;
+   
+}
+.order-menu ul
+{
+    display: flex;
+}
+.order-menu ul li
+{
+    list-style: none;
+    padding: 5px 15px;
+    cursor: default;
+}
+.order-menu ul li:hover{
+    background: rgb(221, 220, 220);
+}
+.position-menu
+{
+    background: white;
+}
+.position-menu ul {
+    display: flex;
+}
+.position-menu ul li{
+    width: 60px;
+    padding: 5px 15px;
+    margin: 5px 30px;
+    list-style: none;
+    background: lightblue;
+    text-align: center;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.order-table{
+   overflow: scroll;
+   height: 140px;
+}
+.order-table table  tr th, .invoice table tr th
+{
+    width: 240px;
+    border-right: 1px grey solid;
+}
+.inactive
+{
+    display: none;
+}
+.active
+{
+    display: block;
+    
+}
+
+.om-selected
+{
+    background: rgb(221, 220, 220);
+}
+.dropdown
+{
+    width: 30%;
+    position: absolute;
+    top: 13px;
+    right: 120px;
+    float: right;
+    background: dimgrey;
+    padding: 5px;
+    color: snow;
+    border-radius: 5px;
+    font-weight: bold;
+    font-style: italic;
+}
+.email
+{
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 100px;
+    background: dimgray;
+    padding: 5px;
+    color: snow;
+    border-radius: 5px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.email option
+{
+    
+    padding: 15px;
+   
+}
+.account-info
+{
+    position: absolute;
+    top: 650px;
+    left: 0px;
+    width: 1520px;
+    padding: 5px;
+    color: black;
+    text-align: center;
+}
+.account-info ul
+{
+    display: flex;
+    list-style: none;
+    background: #dddcdC;
+    
+}
+.account-info ul li
+{
+    margin: 5px auto;
+    font-size: 15px;
+
+}
+.table-all
+{
+    overflow: scroll;
+}
+#red{
+    color: rgb(207, 7, 7);
+    
+    font-weight: bold;
+}
+#blue
+{
+    
+    color: rgb(7, 7, 207);
+    font-weight: bold;
+}
+.red{
+    color: rgb(129, 6, 6);
+    
+    font-weight: bold;
+}
+.blue
+{
+   
+    color: rgb(11, 11, 138);
+    font-weight: bold;
+}
+.size-margin
+{
+   position: absolute;
+   top: 220px;
+   left: 10px;
+}
+#selected
+{
+    background: #dddcdC;
+}
+.popup
+{
+    position: absolute;
+    height:50px;
+    width:260px;
+    top: 20px;
+    right: 0px;
+    background: #c7c5c5;
+    border-radius: 5px;
+    display: flex;
+    display: none;
+    
+    
+}
+.bar
+{
+    position: relative;
+}
+.msg{
+    position: relative;
+    width: 60%;
+   top: -50px;
+    margin-left: 70px;
+    font-weight: bold;
+    font-size: 12px;
+    padding-top: 2px;
+    
+   
+}
+#closed-orders
+{
+    overflow: scroll;
+    height: 160px;
+}
+
+h3{
+    cursor: pointer;
+    background: whitesmoke;
+}
+#all-currencies , #pop, #cryptocurrencies, #bullion
+{
+    display: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+  }
+
+.text
+{
+    padding-left: 5px;
+}
+.market-info
+{
+    position: absolute;
+    display: flex;
+    top: 10px;
+    left: 40%;
+    color: white;
+    background: dimgray;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 2px solid gray;
+    font-weight: bold;
+}
+.market-info div{
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 3px;
+    border: black 1px solid;
+    border-radius: 4px;
+}
+.warning-bar
+{
+    color: red;
+    font-style: italic;
+}
+@supports (-ms-ime-align: auto) {
+    .order, .account-info {
+          width: 1580px;
+    }
+  }
+
+  

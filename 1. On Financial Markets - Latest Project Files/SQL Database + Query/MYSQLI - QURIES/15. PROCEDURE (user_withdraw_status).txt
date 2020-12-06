@@ -1,0 +1,22 @@
+DELIMITER $$
+
+CREATE PROCEDURE user_withdraw_status(
+UserID_auth VARCHAR(250))
+
+
+
+BEGIN
+
+
+SELECT * FROM withdraw WHERE UserID = UserID_auth;
+
+
+
+
+END$$
+
+
+
+--------- Execute ---------------
+
+CALL user_withdraw_status(13);

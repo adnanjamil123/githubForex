@@ -1,0 +1,14 @@
+DELIMITER $$
+
+CREATE PROCEDURE useraccount_requests()
+
+BEGIN
+SELECT * FROM users u, customer_account a WHERE u.UserID = a.UserID AND account_status = 'NOT VERIFIED';
+
+
+END $$
+
+
+
+------------CALLING VIEW----------
+CALL useraccount_requests

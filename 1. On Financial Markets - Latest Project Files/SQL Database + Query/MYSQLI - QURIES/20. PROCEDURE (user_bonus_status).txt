@@ -1,0 +1,22 @@
+DELIMITER $$
+
+CREATE PROCEDURE user_bonus_status(
+UserID_auth VARCHAR(250))
+
+
+
+BEGIN
+
+
+SELECT * FROM bonus_request WHERE UserID = UserID_auth;
+
+
+
+
+END$$
+
+
+
+--------- Execute ---------------
+
+CALL user_bonus_status(13);

@@ -1,0 +1,14 @@
+DELIMITER $$
+
+CREATE PROCEDURE our_users_status()
+
+BEGIN
+SELECT * FROM users u, customer_account a WHERE u.UserID = a.UserID;
+
+
+END $$
+
+
+
+------------CALLING PROCEDURE----------
+CALL our_users_status

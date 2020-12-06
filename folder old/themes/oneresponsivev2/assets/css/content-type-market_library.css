@@ -1,0 +1,60 @@
+
+.dougnutChartBlock {
+	padding:12px 0px 6px 0px;
+	border:1px solid #ccc;
+	margin:0px -80px 10px 10px;
+	width:170px;
+	display: none;
+    font-family: "Oxygen",Arial,Helvetica,sans-serif;	
+}
+.dougnutChartBlock .title h3 {
+	font-size:16px;
+	margin-top:0;
+	padding:0px 12px 0px 12px;	
+}
+.dougnutChartBlock .chartInnerLabel { 
+
+    line-height: 14px;
+	position:absolute; margin: auto auto; 
+	text-align:center; width:80px; height:85px; left:0; right:0; top:0; bottom:0; line-height:normal; font-size:18px; font-weight:bold; 
+}
+.dougnutChartBlock .chartInnerLabel .Long, .dougnutChartBlock .chartInnerLabel .Buy { 
+	color:#0091e6;
+}
+.dougnutChartBlock .chartInnerLabel .Short, .dougnutChartBlock .chartInnerLabel .Sell { 
+	color:#f24141;
+}
+
+.dougnutChartBlock .dChart { margin:0 auto; position: relative; width:170px; height: 170px }
+.dougnutChartBlock .chart { position:absolute; z-index: 2; width:170px; height: 170px }
+
+#prices-block-2 {
+	display:none;
+}
+
+
+/* Medium Devices, Desktops */
+@media (max-width : 1200px) {
+	.dougnutChartBlock {
+		margin:0px -35px 10px 10px;
+	}
+}
+
+
+  /* Small Devices, Tablets */
+@media (max-width : 768px) {
+	.dougnutChartBlock {
+		margin:0px 0px 10px 10px;
+	}
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+    
+}
+    

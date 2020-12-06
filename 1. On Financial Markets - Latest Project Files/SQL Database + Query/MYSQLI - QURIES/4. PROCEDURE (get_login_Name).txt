@@ -1,0 +1,21 @@
+DELIMITER $$
+
+CREATE PROCEDURE get_login_Name(
+UserID VARCHAR(250))
+
+BEGIN
+
+DECLARE message VARCHAR(50);
+
+
+		SELECT * FROM users u , customer_account a WHERE u.UserID = a.UserID AND u.UserID = UserID;
+
+END $$
+
+
+
+----------------- FOR EXECUTE -----------------
+
+
+
+CALL get_login_Name('11');

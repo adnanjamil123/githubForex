@@ -1,0 +1,893 @@
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+
+@media (min-width: 992px) {
+	.no-padding {
+	    padding-right:0;
+	    padding-left:0;
+	}
+}
+.no-halo {
+    text-shadow: none  !important;
+}
+.homeFeatureOuter {
+    padding-bottom:20px;
+}
+#ofmslider {
+	margin-bottom: 0;
+}
+.homeFeature {
+	background-color:#f9f9f9;
+	border: 1px solid #ebebeb;
+    cursor: pointer;
+    height: 100%;
+}
+.homeFeature .inner {
+	padding:0 12px 12px 12px;
+	line-height: 1.4;
+}
+.homeFeature img {
+	width:100%;
+	height:auto;
+}
+.homeFeature h2 i {
+	color:#219ce0;
+}
+
+.homeFeatureSelected {
+	border:1px solid #219ce0;
+}
+.homeFeature .selected {
+	color:#219ce0;
+}
+.last {
+	margin-right:0;
+}
+.homeFeature .mainLinkContainer {
+	border:0px solid black;
+}
+/*
+.homeFeature .mainLinkContainer {
+    border: 1px solid black;
+    position: relative;
+    text-align: right;
+    top: 150px;
+}
+*/
+.homeFeature .mainLink {
+	border:0px solid black;
+	text-align:right;
+	margin:0 12px 12px 0;
+}
+.homeFeature .mainLink span {
+	border:0px solid black;
+	display:block;
+	color:#333;	
+	font-size:14px;
+	font-weight:bold;
+	padding:0 15px 0 0;
+	margin:0 12px 0 0;
+	background-image:url(/themes/oneresponsivev2/assets/images/link-arrow-4.png);
+	background-repeat:no-repeat;
+	background-position:right 0;
+}
+.homeFeature .mainLink .mlSelected {
+	color:#219ce0;	
+	background-position:right -84px;
+}
+.homeFeature .text {
+	font-size:12px;
+	border:0px solid black;
+	padding-bottom:10px;
+} 
+.homeFeature h2, .homeFeature h2 a {
+	color:#00acd3;	
+	font-size:18px;
+	border:0px solid black;
+	margin-top:12px;
+	margin-bottom:4px;
+}
+.homeFeature h2 a:hover {
+	color:#002c5e;
+}
+.homeLayout #social a {
+    display: inline-block;
+    margin: 0 3px 0 0;
+}
+
+.home-feature-2016 {
+	padding-top:30px;
+	padding-bottom:20px;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.home-feature-2016 h2 {
+	color:#00b8e2;
+}
+.home-feature-2016 .container {
+	background-color: transparent;
+}
+
+.home-feature-2016 .dark, .home-feature-2016 .dark p {
+	color:white;
+}
+.social-media-wrapper {
+	padding-top:40px;
+	padding-bottom:10px;
+}
+.btn-front-home {
+	padding-left:30px;
+	padding-right:30px;
+	margin-top:20px;
+}
+@media (max-width: 768px) {
+	.home-feature-2016 {
+		padding-top:0;
+	}
+	.home-feature-2016 h2 {
+		font-size:18px;
+	}
+	.home-feature-2016 h2.cm {
+		background-color:white;
+		padding-top:10px;
+		padding-bottom:10px
+	}
+	.home-feature-2016 .content {
+		background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
+		padding-top:10px;
+		padding-bottom:20px
+	}
+	.home-feature-2016 .mobile-view {
+		height:100px;
+		background-size: auto 100px;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.social-media-wrapper {
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+}
+@media (min-width: 768px) {
+	.homeFeature {
+		xheight:200px;
+	}
+}
+@media screen and (min-width: 769px){
+	.home-feature-2016 .new-main-banner .devices {
+		position: absolute;
+	}
+}
+
+.home-feature-2016 .new-main-banner .devices img {
+	display: block;
+	margin: auto;
+}
+.home-feature-2016 .new-main-banner .laptop {
+	/*left: -500px;*/
+	/*right: 0;*/
+	/*margin: 0 auto;*/
+	z-index: 1;
+	bottom: -366px;
+}
+.home-feature-2016 .new-main-banner .laptop img{
+
+}
+.home-feature-2016 .new-main-banner .desktop {
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.home-feature-2016 .new-main-banner .mobile {
+	/*left: 0;*/
+	right: 180px;
+	/*margin: 0 auto;*/
+	z-index: 1;
+	bottom: -366px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+	.home-feature-2016 .new-main-banner .devices img {
+		display: block;
+		margin: auto;
+	}
+	.home-feature-2016 .new-main-banner .laptop {
+		left: -100px;
+	}
+	.home-feature-2016 .new-main-banner .laptop img{
+		width: 80%;
+	}
+	.home-feature-2016 .new-main-banner .desktop {
+
+	}
+	.home-feature-2016 .new-main-banner .desktop img{
+		width: 60%;
+	}
+	.home-feature-2016 .new-main-banner .mobile {
+		right: 2px;
+	}
+	.home-feature-2016 .new-main-banner .mobile img{
+		width: 80%;
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 991px){
+	.home-feature-2016 .new-main-banner .btn-container {
+		margin-top: 48%;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	.home-feature-2016 .new-main-banner .btn-container {
+		margin-top: 38%;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.home-feature-2016 .new-main-banner .btn-container {
+		margin-top: 30%;
+	}
+}
+.home-feature-2016 .new-main-banner .btn-container > a{
+	width: auto;
+}
+
+.home-feature-2016 .three-steps .live-btn-container {
+	margin-top: 15%;
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+	.home-feature-2016 .grey-border-box {
+		padding-bottom: 120%;
+	}
+}
+@media screen and (min-width: 993px) and (max-width: 1200px){
+	.home-feature-2016 .grey-border-box {
+		padding-bottom: 80%;
+	}
+}
+.glow 
+{
+	text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
+}
+.front-corporate-video-overlay {
+	background: url('/themes/oneresponsivev2/assets/images/homepage-video-overlay.jpg');
+	height:419px;
+	text-align:center;
+	cursor:pointer;
+
+}
+.front-corporate-video-overlay p {
+	font-size: 30px;
+}
+.front-corporate-video-overlay p.line-2 {
+	color: #00b8e2;
+}
+.front-corporate-video-overlay .block {
+	padding-top:50px;
+}
+.front-corporate-video {
+	display:none;
+	background-color: #fdfbf9;
+}
+.video-play-icon {
+	background: url('/themes/oneresponsivev2/assets/images/video-icon-off.png');
+	background-repeat: no-repeat;
+	width: 96px;
+	height: 96px;
+	display:inline-block;
+}
+.video-play-icon:hover {
+	background: url('/themes/oneresponsivev2/assets/images/video-icon-on.png');
+}
+.front-corporate-video .inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 42.5%;    
+}
+.front-corporate-video .inner .front-corporate-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}	
+.front-corporate-video-overlay .container, .front-corporate-video .container {
+	background-color: transparent !important;
+}
+.popUpMarketing {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	display:none;
+	z-index: 1010;
+}
+.popUpMarketing .outer{
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.popUpMarketing .inner {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.popUpMarketing .warning {
+	background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/popupbgdark.jpg');
+	background-size: cover;
+	background-color: white;
+	background-repeat: no-repeat;
+	min-width: 320px;
+	max-width: 600px;
+	min-height: 490px;
+	margin: 0 auto;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	display: none;
+	position: relative;
+}
+.popUpMarketing .popup-text p{
+	color: #fff;
+	text-align: left;
+}
+.popUpMarketing .popup-logo {
+	margin-bottom: 30px;
+}
+.popUpMarketing .popup-devices img {
+	float: left;
+}
+.popUpMarketing button.close {
+	color: #fff;
+	padding-right: 5px;
+	opacity: 1;
+}
+.popUpMarketing .btn-container .close {
+	width: 12px;
+	height: 12px;
+	overflow: hidden;
+	position: relative;
+	opacity: 0.8;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+.popUpMarketing .btn-demo {
+	width: 100%;
+}
+.popUpMarketing .btn-container .close:before {
+	width: 200%;
+	left: -50%;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	content: '';
+	position: absolute;
+	height: 2px;
+	top: 50%;
+	margin-top: -1px;
+	background: #fff;
+}
+.popUpMarketing .btn-container .close:after {
+	width: 200%;
+	left: -50%;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	content: '';
+	position: absolute;
+	height: 2px;
+	top: 50%;
+	margin-top: -1px;
+	background: #fff;
+}
+.popUpMarketing .close:hover {
+	opacity: 1;
+}
+.demolive-btn-wrapper {
+	position: absolute;
+	bottom: 10px;
+}
+#notice-warning {
+	background-color: #0f377c;
+	clear: left;
+}
+#notice-warning .container {
+	padding: 10px 5px;
+}
+#notice-warning .container > .row{
+	margin-right: 0;
+}
+#notice-warning .container p,
+#notice-warning .container {
+	background-color: #0f377c;
+	color: #ffff;
+	font-size: 12px;
+}
+.blur {
+	-webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px);
+	-ms-filter: blur(3px);
+	filter: blur(3px);
+	opacity: 1;
+}
+.video-slider-item {
+	position: relative;
+}
+@media screen and (max-width: 769px){
+	.video-slider-item.video-poster {
+		background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/arabic/files/poster-bg.jpg');
+		background-repeat: no-repeat;
+		background-position: center -407px !important;
+	}
+	.video-slider-item video {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 770px) and (max-width: 1020px){
+	.video-slider-item video {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -10;
+	}
+}
+@media screen and (min-width: 1021px) and (max-width: 1420px) {
+	.video-slider-item video {
+		width: 100%;
+		position: absolute;
+		top: -130px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -10;
+	}
+}
+@media screen and (min-width: 1421px) and (max-width:1680px) {
+	.video-slider-item video {
+		width: 100%;
+		position: absolute;
+		top: -245px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -10;
+	}
+}
+@media screen and (min-width: 1681px) {
+	.video-slider-item video {
+		width: 100%;
+		position: absolute;
+		top: -305px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -10;
+	}
+}
+#video_slider {
+	width: 100%;
+	/*position: absolute;*/
+	/*top: -270px;*/
+	/*left: 0;*/
+	/*right: 0;*/
+	/*bottom: 0;*/
+}
+@media screen and (min-width: 769px) {
+	.video-slider-item .dark h2,
+	.video-slider-item .dark p{
+		color: #ffffff;
+		margin-bottom: 36px;
+		text-shadow: 4px 2px 5px black;
+	}
+}
+/**
+Twitter scrolling timeline
+ */
+.twitter-timeline {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #d7d7d7;
+	border-top: 1px solid #d7d7d7;
+}
+.twitter-timeline .container {
+	background-color: #f8f8f8;
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+}
+
+.twitter-timeline  .twitter-logo-container {
+	float: left;
+}
+@media screen and (min-width: 768px){
+	.twitter-timeline  .twitter-logo-container {
+		width: 5%;
+	}
+}
+.marquee-messages-container,
+.twitter-timeline .tweetslidercontainer {
+	overflow: hidden;
+}
+#marquee-messages,
+.twitter-timeline #tweets {
+	position: relative;
+	white-space: nowrap;
+	font-size: 0;
+	width: auto !important;
+}
+#marquee-messages span,
+.twitter-timeline #tweets span {
+	display: inline-block;
+	white-space: nowrap;
+	vertical-align: middle;
+
+}
+.twitter-timeline #tweets .tweetblock {
+	width: auto !important;
+	margin-right: 10px;
+}
+#marquee-messages .ofmmarquee,
+.twitter-timeline #tweets .ofmtwitteraccount {
+	margin-left: 10px;
+	font-size: 13px;
+	margin-right: 40px;
+}
+.twitter-timeline #tweets .slick-slide.twittertext {
+	width: auto !important;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.twitter-timeline #tweets .slick-prev.slick-arrow {
+	display: none !important;
+}
+/**
+OFM Live prices Ticker
+ */
+#ofm-ticker-products {
+	width: 100% !important
+}
+#ofm-ticker-products-container #tickerLogo {
+	display: none
+}
+#ofm-ticker-products-container #livepricesFeedContainer {
+	width: 100% !important;
+	border: none
+}
+#ofm-ticker-products-container #livepricesFeedContainer .tickercontainer {
+	width: 100% !important;
+	background-color: #f7f7f7
+}
+#ofm-ticker-products-container #livepricesFeedContainer .tickercontainer #livepricesFeed li {
+	background-color: #f7f7f7;
+	background-image: none
+}
+#ofm-ticker-products-container #livepricesFeedContainer .tickercontainer #livepricesFeed li span {
+	background-color: #f7f7f7 !important
+}
+#ofm-ticker-products-container #livepricesFeedContainer .tickercontainer #livepricesFeed li span.lpup {
+	color: #00b8e2;
+	font-weight: bold
+}
+#ofm-ticker-products-container #livepricesFeedContainer .tickercontainer #livepricesFeed li span.lpdown {
+	color: #ae495a;
+	font-weight: bold
+}
+#ofm-ticker-products-container #livepricesFeedContainer .tickercontainer .mask {
+	width: 100% !important
+}
+#ofm-ticker-products #livepricesFeedContainer {
+	border: none !important;
+}
+
+/**
+China home page video playlist block
+ */
+/*.cn_videoarea {*/
+	/*position: relative;*/
+/*}*/
+/*#cn_playlist {*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*right: 0;*/
+
+/*}*/
+/*#cn_playlist li{*/
+	/*cursor:pointer;*/
+	/*padding:8px;*/
+/*}*/
+
+/*#cn_playlist li:hover{*/
+	/*color:blue;*/
+/*}*/
+.commentary-download-container,
+.platforms-container,
+.daily-commentary-wrapper,
+.promotional-block,
+.china-video-block {
+	margin-bottom: 20px;
+}
+
+.platforms-container .download-icon {
+	border-bottom: 1px solid #CECECE;
+}
+.promotional-block .soundicon,
+.china-video-block .videoicon {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #CECECE;
+	margin-bottom: 5px;
+}
+.platforms-container .download-icon img,
+.daily-commentary-wrapper .daily-commentary-icon img,
+.promotional-block .soundicon img,
+.china-video-block .videoicon img {
+	margin-bottom: 10px;
+}
+.platforms-container .download-icon span,
+.daily-commentary-wrapper .daily-commentary-icon span,
+.promotional-block .soundicon span,
+.china-video-block .videoicon span {
+	color: #4FB1D8;
+	font-size: 20px;
+}
+.daily-commentary-wrapper .block-views .view-content,
+.daily-commentary-wrapper .block-views .view-header {
+	overflow: hidden;
+}
+.daily-commentary-wrapper .block-views .view-header > img {
+	width: 100%;
+	height: auto;
+}
+.daily-commentary-wrapper .block-views .view-content article {
+	border-bottom: 1px solid #CECECE;
+	margin-bottom: 5px;
+}
+.daily-commentary-wrapper .block-views .view-content article:hover {
+	background-color: #ede7e7;
+}
+.platforms-container ul.nav-tabs li > a {
+	border: none;
+}
+.platforms-container ul.nav-tabs li.active > a {
+	border-top: 0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: 2px solid #39B44A;
+}
+.platforms-container ul.nav-tabs {
+	border: 0px;
+}
+.lower-promo-block {
+	overflow: hidden;
+}
+@media screen and (max-width: 992px){
+	.lower-promo-block a > img{
+		/*width: 100%;*/
+	}
+}
+#block-views-china_video_block-block {
+	background-color: #000000;
+}
+#videoarea {
+	display: block;
+	width: 100%;
+	max-height: 300px;
+}
+.feature-video img{
+	width: 100%;
+}
+.feature-video img.default-width {
+	width: auto;
+}
+.cn_videoarea_wrapper {
+	position: relative;
+	overflow: hidden;
+	margin-right: 0;
+}
+.cn_videoarea_wrapper .cn_videoarea .video_title {
+	background-color: #0000;
+	color: #fff;
+}
+.cn_videoarea_wrapper .cn_videoarea p {
+	margin-bottom: 5px;
+}
+.cn_videoarea_wrapper .cn_videoarea a {
+	color: #fff;
+}
+@media screen and (max-width: 991px){
+	.cn_videoarea_wrapper .cn_videoarea {
+		float: left;
+	}
+}
+
+.cn_videoarea_wrapper > .show-pl-btn {
+	float: right;
+	color: #fff;
+	margin-right: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.cn_videoarea_wrapper > .show-pl-btn:hover {
+	background-color: #fff;
+}
+.cn_videoarea_wrapper > .col-md-12 {
+	padding-right: 0;
+}
+.cn_playlist_wrapper {
+	background-color: #000;
+	position: absolute;
+	right: -150px;
+	top: 0;
+	bottom: 0;
+	-webkit-transition-property: right;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease;
+	transition-property: right;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
+
+}
+.cn_playlist_wrapper.show_pl {
+	right: 0;
+}
+.cn_playlist_wrapper ul#cn_playlist li {
+	list-style: none;
+}
+.cn_playlist_wrapper span.cross-icon {
+	margin-left: -14px;
+	float: left;
+	background-color: #000000;
+	cursor: pointer;
+}
+.cn_playlist_wrapper span.cross-icon img {
+	height: 19px;
+}
+#cn_playlist {
+	padding-left: 5px;
+	height: 100%;
+}
+#cn_playlist li {
+	width: 100px;
+	/*height: 25%;*/
+	overflow:hidden;
+	position: relative;
+}
+#cn_playlist li span.play-icon {
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	top: 38%;
+	bottom: 0;
+	right: 0;
+	left: 30%;
+	background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/china/files/cn-play-icon.png');
+	background-repeat: no-repeat;
+	display: block;
+}
+#cn_playlist li img {
+	height: 100%;
+	/*width: auto;*/
+}
+
+@media screen and (min-width: 1200px){
+	.feature-video .cover-image-container {
+		height: 276px;
+		overflow: hidden;
+		position: relative;
+	}
+}
+
+.feature-video .feature-video-archives {
+	padding: 5px 10px 2px 10px;
+}
+.promotional-block {
+	overflow: hidden;
+}
+.promotional-block .single-promo-block {
+	margin-bottom: 10px;
+	/*padding-bottom: .75rem;*/
+	/*padding-top: .75rem;*/
+	/*border: 1px solid black;*/
+}
+.promotional-block .promo_image {
+	position: relative;
+}
+@media screen and (min-width: 320px) and (max-width: 991px){
+	.promotional-block .promo_image {
+		max-height: 180px;
+		overflow: hidden;
+	}
+}
+.promotional-block .promo_title {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	-webkit-transition: bottom 0.2s ease-out;
+	-moz-transition: bottom 0.2s ease-out;
+	-o-transition: bottom 0.2s ease-out;
+	transition: bottom 0.2s ease-out;
+}
+
+@media screen and (max-width: 991px){
+	.promotional-block .promo_image img{
+		width:100%;
+	}
+}
+@media screen and (min-width: 992px){
+	.promotional-block .promo_image img{
+		width:auto;
+		max-width: 100%;
+
+	}
+	.promotional-block a:hover .promo_title {
+		bottom: -100px;
+	}
+}
+
+.promotional-block .promo_title p{
+	color: #fff;
+	padding-top: 5px;
+}
+.promotional-block a {
+	overflow: hidden;
+}
+.article-container {
+	margin-top: 10px;
+}
+.article-container .news-thumb-container {
+	overflow: hidden;
+	position: relative;
+	padding-right: 5px;
+}
+.article-container .more-daily-comm {
+	clear: left;
+}
+.article-container .more-daily-comm > a {
+	margin-right: 20px;
+}
+.article-container .news-content-container {
+	padding-left: 5px;
+}
+.article-container .news-thumb-container img{
+	width: 100%;
+	margin-bottom:5px;
+	/*position:absolute;*/
+	/*margin: auto;*/
+	/*min-height: 100%;*/
+	/*min-width: 100%;*/
+	/*left: -100%;*/
+	/*right: -100%;*/
+	/*top: -100%;*/
+	/*bottom: -100%;*/
+}
+.article-container .news-content-container .bodycontent{
+	margin-right: 20px;
+}
+.platforms-container .tab-content {
+	margin-top: 20px;
+}
+.platforms-container .tab-content .btn-container {
+	padding-left: 10px;
+	display: block;
+	float: left;
+	width: 30%;
+	margin-top: 10%;
+}
+.platforms-container .tab-content .btn-container .btn {
+	color: #fff;
+}

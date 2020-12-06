@@ -1,0 +1,23 @@
+DELIMITER $$
+
+CREATE PROCEDURE get_login_UserID(
+user_email_auth VARCHAR(250))
+
+BEGIN
+
+DECLARE message VARCHAR(50);
+
+
+		SET message = (SELECT UserID FROM users WHERE user_email = user_email_auth);
+
+		SELECT message;
+
+END $$
+
+
+
+----------------- FOR EXECUTE -----------------
+
+
+
+CALL get_login_UserID('adnanjamil@gmail.com');

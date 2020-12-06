@@ -1,0 +1,10 @@
+CREATE VIEW withdraw_status
+AS
+SELECT * FROM withdraw WHERE withdraw_status = 'NOT APPROVED'
+
+
+
+
+
+------------CALLING VIEW----------
+SELECT * FROM withdraw_status

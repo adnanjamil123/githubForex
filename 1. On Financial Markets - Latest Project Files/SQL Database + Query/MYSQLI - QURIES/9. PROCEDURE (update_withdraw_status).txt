@@ -1,0 +1,53 @@
+DELIMITER $$
+
+CREATE PROCEDURE update_withdraw_status(
+WID_auth INT,
+UserID_auth VARCHAR(250))
+
+BEGIN
+
+	DECLARE message VARCHAR(50);
+	DECLARE get_withdraw_status CHAR(15);
+        DECLARE	get_withdraw_amount DECIMAL(15,4);
+	DECLARE	get_account_actual_balance DECIMAL(15,4);
+	DECLARE new_balance DECIMAL(15,4);
+
+	SET get_withdraw_status = (SELECT withdraw_status FROM withdraw WHERE WID = WID_auth);
+	
+	IF(get_withdraw_status != 'APPROVED')
+	
+	THEN
+
+	UPDATE customer_account SET account_promotion_status = 'NO' WHERE UserID = UserID_auth;
+	
+	UPDATE customer_account SET account_virtual_balance = 0 WHERE UserID = UserID_auth;
+
+	UPDATE withdraw SET withdraw_status = 'APPROVED' WHERE WID = WID_auth;
+
+	SET get_withdraw_amount = (SELECT withdraw_amount FROM withdraw WHERE WID = WID_auth);
+
+	SET get_account_actual_balance = (SELECT account_actual_balance FROM customer_account WHERE UserID = UserID_auth);
+
+	SET new_balance = get_account_actual_balance - get_withdraw_amount;
+
+	UPDATE customer_account SET account_actual_balance = new_balance WHERE UserID = UserID_auth;
+	
+	SET message = 'WITHDRAW APPROVED';
+	
+	
+	ELSE
+	
+	SET message = 'ALREADY WITHDRAW APPROVED';
+	
+	END IF;
+	
+	SELECT message;
+
+
+END $$
+
+
+
+--------- Execute ---------------
+
+CALL update_withdraw_status (4, 8);

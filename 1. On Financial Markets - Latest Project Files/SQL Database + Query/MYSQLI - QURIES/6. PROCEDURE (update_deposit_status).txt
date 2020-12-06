@@ -1,0 +1,50 @@
+DELIMITER $$
+
+CREATE PROCEDURE update_deposit_status(
+DID_auth INT,
+UserID_auth VARCHAR(250))
+
+BEGIN
+
+	DECLARE message VARCHAR(50);
+	DECLARE get_deposit_amount DECIMAL(15,4);
+	DECLARE	get_account_actual_balance DECIMAL(15,4);
+	DECLARE get_deposit_status CHAR(15);
+	DECLARE new_balance DECIMAL(15,4);
+
+	SET get_deposit_status = (SELECT deposit_status FROM deposit WHERE DID = DID_auth);
+	
+	IF(get_deposit_status != 'APPROVED')
+	
+	THEN
+	
+	UPDATE deposit SET deposit_status = 'APPROVED' WHERE DID = DID_auth;
+
+	SET get_deposit_amount = (SELECT deposit_amount FROM deposit WHERE DID = DID_auth);
+
+	SET get_account_actual_balance = (SELECT account_actual_balance FROM customer_account WHERE UserID = UserID_auth);
+
+	SET new_balance = get_account_actual_balance + get_deposit_amount;
+
+	UPDATE customer_account SET account_actual_balance = new_balance WHERE UserID = UserID_auth;
+	
+	SET message = 'PAYMENT APPROVED';
+	
+	
+	
+	ELSE
+	
+	SET message = 'ALREADY PAYMENT APPROVED';
+	
+	END IF;
+	
+	SELECT message;
+
+
+END $$
+
+
+
+--------- Execute ---------------
+
+CALL update_deposit_status (4, 8);

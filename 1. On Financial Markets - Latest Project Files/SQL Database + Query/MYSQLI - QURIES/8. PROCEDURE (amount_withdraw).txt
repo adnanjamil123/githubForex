@@ -1,0 +1,59 @@
+DELIMITER $$
+
+CREATE PROCEDURE amount_withdraw(
+withdraw_account_email VARCHAR(250), 
+withdraw_account_password VARCHAR(250), 
+withdraw_method_type CHAR(25), 
+withdraw_amount_auth DECIMAL(15,4), 
+UserID_auth VARCHAR(250))
+
+
+BEGIN
+
+	DECLARE get_account_actual_balance DECIMAL(15,4);
+    DECLARE withdraw_status_auth CHAR(15);
+	DECLARE message VARCHAR(50);
+	DECLARE get_withdraw_request_balance DECIMAL(15,4);
+	
+	SET get_withdraw_request_balance = (SELECT SUM(withdraw_amount) FROM withdraw WHERE UserID = UserID_auth AND withdraw_status = 'NOT APPROVED');
+	
+	IF(get_withdraw_request_balance is null)
+
+	THEN
+	
+		SET get_withdraw_request_balance = 0;
+		
+	END IF;
+
+	
+	SET get_account_actual_balance = (SELECT account_actual_balance FROM customer_account WHERE UserID = UserID_auth);
+
+	SET withdraw_status_auth = 'NOT APPROVED';
+
+	IF(withdraw_amount_auth <= (get_account_actual_balance - get_withdraw_request_balance))
+
+	THEN
+
+		INSERT INTO withdraw(withdraw_account_email, withdraw_account_password, withdraw_method_type, withdraw_amount, withdraw_status, withdraw_datetime, UserID) VALUES(withdraw_account_email, withdraw_account_password, withdraw_method_type, withdraw_amount_auth, withdraw_status_auth, NOW(), UserID_auth);
+
+		SET message = 'TRANSACTION COMPLETED';
+
+	ELSE
+
+
+		SET message = 'WITHDRAWAL AMOUNT EXCEEDS CURRENT BALANCE';
+
+
+	
+
+END IF;
+
+SELECT message;
+
+END$$
+
+
+
+--------- Execute ---------------
+
+CALL amount_deposit ('adnanjamil@gmail.com', 'Abc@121', 'PAYPAL', 50, 8);

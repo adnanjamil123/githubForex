@@ -1,0 +1,265 @@
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+
+@media (min-width: 992px) {
+    .no-padding {
+        padding-right:0;
+        padding-left:0;
+    }
+}
+
+.homeFeatureOuter {
+    padding-bottom:20px;
+}
+.homeFeature {
+    background-color:#f9f9f9;
+    border: 1px solid #ebebeb;
+    cursor: pointer;
+    height: 100%;
+}
+.homeFeature .inner {
+    padding:0 12px 12px 12px;
+    line-height: 1.4;
+}
+.homeFeature img {
+    width:100%;
+    height:auto;
+}
+.homeFeature h2 i {
+    color:#219ce0;
+}
+
+.homeFeatureSelected {
+    border:1px solid #219ce0;
+}
+.homeFeature .selected {
+    color:#219ce0;
+}
+.last {
+    margin-right:0;
+}
+.homeFeature .mainLinkContainer {
+    border:0px solid black;
+}
+/*
+.homeFeature .mainLinkContainer {
+    border: 1px solid black;
+    position: relative;
+    text-align: right;
+    top: 150px;
+}
+*/
+.homeFeature .mainLink {
+    border:0px solid black;
+    text-align:right;
+    margin:0 12px 12px 0;
+}
+.homeFeature .mainLink span {
+    border:0px solid black;
+    display:block;
+    color:#333;
+    font-size:14px;
+    font-weight:bold;
+    padding:0 15px 0 0;
+    margin:0 12px 0 0;
+    background-image:url(/themes/oneresponsivev2/assets/images/link-arrow-4.png);
+    background-repeat:no-repeat;
+    background-position:right 0;
+}
+.homeFeature .mainLink .mlSelected {
+    color:#219ce0;
+    background-position:right -84px;
+}
+.homeFeature .text {
+    font-size:12px;
+    border:0px solid black;
+    padding-bottom:10px;
+}
+.homeFeature h2, .homeFeature h2 a {
+    color:#00acd3;
+    font-size:18px;
+    border:0px solid black;
+    margin-top:12px;
+    margin-bottom:4px;
+}
+.homeFeature h2 a:hover {
+    color:#002c5e;
+}
+.homeLayout #social a {
+    display: inline-block;
+    margin: 0 3px 0 0;
+}
+
+.home-feature-2016 {
+    padding-top:30px;
+    padding-bottom:20px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.home-feature-2016 h2 {
+    color:#00b8e2;
+}
+.home-feature-2016 .container {
+    background-color: transparent;
+}
+
+.home-feature-2016 .dark, .home-feature-2016 .dark p {
+    color:white;
+}
+.social-media-wrapper {
+    padding-top:40px;
+    padding-bottom:10px;
+}
+.btn-front-home {
+    padding-left:30px;
+    padding-right:30px;
+    margin-top:20px;
+}
+@media (max-width: 768px) {
+    .home-feature-2016 {
+        padding-top:0;
+    }
+    .home-feature-2016 h2 {
+        font-size:18px;
+    }
+    .home-feature-2016 h2.cm {
+        background-color:white;
+        padding-top:10px;
+        padding-bottom:10px
+    }
+    .home-feature-2016 .content {
+        background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
+        padding-top:10px;
+        padding-bottom:20px
+    }
+    .home-feature-2016 .mobile-view {
+        height:100px;
+        background-size: auto 100px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .social-media-wrapper {
+        padding-top:10px;
+        padding-bottom:10px;
+    }
+}
+@media (min-width: 768px) {
+    .homeFeature {
+        xheight:200px;
+    }
+}
+
+.glow
+{
+    text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #fff;
+}
+.front-corporate-video-overlay {
+    background: url('/themes/oneresponsivev2/assets/images/homepage-video-overlay.jpg');
+    height:419px;
+    text-align:center;
+    cursor:pointer;
+
+}
+.front-corporate-video-overlay p {
+    font-size: 30px;
+}
+.front-corporate-video-overlay p.line-2 {
+    color: #00b8e2;
+}
+.front-corporate-video-overlay .block {
+    padding-top:50px;
+}
+.front-corporate-video {
+    display:none;
+    background-color: #fdfbf9;
+}
+.video-play-icon {
+    background: url('/themes/oneresponsivev2/assets/images/video-icon-off.png');
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    display:inline-block;
+}
+.video-play-icon:hover {
+    background: url('/themes/oneresponsivev2/assets/images/video-icon-on.png');
+}
+.front-corporate-video .inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 42.5%;
+}
+.front-corporate-video .inner .front-corporate-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.front-corporate-video-overlay .container, .front-corporate-video .container {
+    background-color: transparent !important;
+}
+
+
+
+body #outerLayout {
+    margin-bottom: 150px;
+}
+
+.academy-modules h1 {
+    color: #00b8e2;
+}
+
+.academy-section-wrapper h2 {
+    color: #00b8e2;
+}
+
+.academy-section-wrapper .container {
+    background-color: inherit;
+}
+
+.academy-section-wrapper .leftColumn {
+    margin-top: 15px;
+}
+
+#mainBanner {
+    margin: 0px;
+}
+
+.item-left-image-academy img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0px auto;
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+    div.academy-section-wrapper {
+        background: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/adcademy-mac.jpg");
+        background-repeat: no-repeat;
+        background-size: initial;
+        background-position: 110% 6%;
+        min-height: 390px;
+    }
+}
+@media only screen and (min-width: 1500px) {
+    div.academy-section-wrapper {
+        background: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/adcademy-mac.jpg");
+        background-repeat: no-repeat;
+        background-size: initial;
+        background-position: 85% 0%;
+        min-height: 390px;
+    }
+}
+@media only screen and (max-width: 990px) {
+    div.academy-section-wrapper {
+        background: none;
+        min-height: 0px;
+    }
+}

@@ -1,0 +1,10 @@
+CREATE VIEW deposit_status
+AS
+SELECT * FROM deposit WHERE deposit_status = 'NOT APPROVED'
+
+
+
+
+
+------------CALLING VIEW----------
+SELECT * FROM deposit_status

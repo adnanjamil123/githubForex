@@ -1,0 +1,1073 @@
+/* CSS Document */
+body.node-type-page h1#page-title {
+    margin-top: 20px;
+}
+.mainColumnWide {
+    margin-bottom: 10px;
+}
+.node-type-page .container {
+    background-color: transparent;
+}
+.page-corporate-video-overlay {
+    /*height:419px;*/
+    text-align:center;
+    cursor:pointer;
+}
+.base-feature .page-corporate-video-overlay p {
+    font-size: 30px;
+    color: #00b8e2;
+}
+#one-trading-platforms-tabs {
+    height: auto;
+}
+.page-corporate-video-overlay p.line-2 {
+    color: #00b8e2;
+}
+.page-corporate-video-overlay .block {
+    padding-top:50px;
+}
+.page-corporate-video {
+    display:none;
+    background-color: #fdfbf9;
+}
+.video-play-icon {
+    background: url('/themes/oneresponsivev2/assets/images/video-icon-off.png');
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    display:inline-block;
+}
+.video-play-icon:hover {
+    background: url('/themes/oneresponsivev2/assets/images/video-icon-on.png');
+}
+.page-corporate-video .inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 42.5%;
+}
+.page-corporate-video .inner .page-corporate-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.page-corporate-video-overlay .container, .page-corporate-video .container {
+    background-color: transparent !important;
+}
+.front-corporate-video-overlay {
+    background: url('/themes/oneresponsivev2/assets/images/homepage-video-overlay.jpg');
+    height:419px;
+    text-align:center;
+    cursor:pointer;
+
+}
+.front-corporate-video-overlay p {
+    font-size: 30px;
+}
+.front-corporate-video-overlay p.line-2 {
+    color: #00b8e2;
+}
+.front-corporate-video-overlay .block {
+    padding-top:50px;
+}
+.front-corporate-video {
+    display:none;
+    background-color: #fdfbf9;
+}
+.video-play-icon {
+    background: url('/themes/oneresponsivev2/assets/images/video-icon-off.png');
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    display:inline-block;
+}
+.video-play-icon:hover {
+    background: url('/themes/oneresponsivev2/assets/images/video-icon-on.png');
+}
+.front-corporate-video .inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 42.5%;
+}
+.front-corporate-video .inner .front-corporate-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.front-corporate-video-overlay .container, .front-corporate-video .container {
+    background-color: transparent !important;
+}
+.uae-arabic.page-node-1694 #page-title,
+.londoneng.page-node-15551 #page-title,
+.londoneng.page-node-86 #page-title,
+.londoneng.page-node-12697 #page-title,
+.londoneng.page-node-12348 #page-title,
+.londoneng.page-node-1694 #page-title {
+    color: #00b8e2;
+    text-transform: uppercase;
+}
+/**
+CFD PAGE RULES
+ **/
+
+.page-node-1694 .base-feature {
+    position: relative;
+}
+.page-node-1694 #mkFormDemo .form-group {
+    text-align: left;
+}
+@media only screen and (min-width: 769px) {
+    .londoneng.page-node-1694 .blue-blur-center {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/blue-blur--gradient.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 700px 700px;
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+    .londoneng.page-node-1694 .cfd-form-wrapper {
+        float: none !important;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+    .londoneng.page-node-1694 .cfd-badge-image-fix img {
+        width: auto !important;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 2000px) {
+    .londoneng.page-node-1694 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.me/sites/default/files/office-interiror-1.jpg');
+        background-repeat: no-repeat;
+        background-position: 60% 6%;
+    }
+
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .uae-arabic.page-node-1694 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.me/sites/default/files/office-interiror-1.jpg');
+        background-repeat: no-repeat;
+        background-position: -272px 6%;
+        background-size: auto 265px;
+    }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1300px) {
+    .uae-arabic.page-node-1694 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.me/sites/default/files/office-interiror-1.jpg');
+        background-repeat: no-repeat;
+        background-position: -350px 6%;
+        background-size: auto 345px;
+    }
+}
+@media only screen and (min-width: 1301px)  and (max-width: 1600px){
+    .uae-arabic.page-node-1694 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.me/sites/default/files/office-interiror-1.jpg');
+        background-repeat: no-repeat;
+        background-position: -325px 6%;
+        background-size: 1000px auto;
+    }
+}
+@media only screen and (min-width: 1601px) {
+    .uae-arabic.page-node-1694 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.me/sites/default/files/office-interiror-1.jpg');
+        background-repeat: no-repeat;
+        background-position: -430px 6%;
+        background-size: auto auto;
+    }
+}
+.page-node-1694 div.container.intro-container {
+    background-color: transparent;
+}
+.page-node-1694 .success-box p {
+    color: #000;
+}
+.page-node-1694 div.cfd-download-bf-wrapper {
+    padding-top: 5px;
+}
+.page-node-1694 div.dark {
+    margin-top: 10px !important;
+}
+.uae-arabic.page-node-1694 .demoForm,
+.londoneng.page-node-1694 .demoForm {
+    padding-top: 0;
+    border-color: transparent;
+}
+/**
+TRADING PLATFORM PAGE RULES
+ **/
+@media only screen and (min-width: 992px) and (max-width: 1480px) {
+    .londoneng.page-node-86 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/tradingpbg.jpg');
+        background-repeat: no-repeat;
+        background-position: 78% 6%;
+    }
+}
+@media only screen and (min-width: 1481px) and (max-width: 2000px) {
+    .londoneng.page-node-86 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/tradingpbg.jpg');
+        background-repeat: no-repeat;
+        background-position: 100% 6%;
+    }
+}
+.page-node-86 div.container.intro-container {
+    background-color: transparent;
+}
+.page-node-86 div.container.intro-container .row {
+    margin-left: 0;
+}
+.page-node-86 div.container.intro-container .row .col-lg-12 {
+    padding-left: 0;
+}
+.trading-three-steps {
+    background-color: #002f5d;
+}
+.trading-three-steps h2 {
+    color: #00b8e2;
+}
+.trading-three-steps .container .row {
+    margin-left: 0;
+}
+.trading-three-steps .container .row .col-sm-6 {
+    padding-left: 0;
+}
+.trading-three-steps .container {
+    background-color: transparent;
+}
+#three-steps-trading-bar,
+.trading-three-steps {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#three-steps-trading-bar .step-text,
+.trading-three-steps .step-text {
+    display: inline-block;
+    color: #fff;
+    margin-right: 15px;
+}
+.trading-three-steps .live_div_inner p {
+    color: #fff;
+}
+#three-steps-trading-bar .live_div_inner {
+    min-height: auto;
+}
+#three-steps-trading-bar .live_div_inner,
+.trading-three-steps .live_div_inner {
+    margin-top: 10px;
+}
+.blue-gradient-btn {
+    width: 100%;
+    margin-top: 3%;
+    background-color: #1eb8e2; /* Old browsers */
+    background: -moz-linear-gradient(top, #1eb8e2 0%, #147b97 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1eb8e2 0%,#147b97 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1eb8e2 0%,#147b97 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border: 2px solid #1eb8e2;
+    color: #fff;
+}
+.blue-gradient-btn:hover {
+    background: #147B97;
+    border-color: #1eb8e2;
+    color: #fff;
+}
+.circled-text {
+    display: inline-block;
+    padding: 0;
+    font-size: 12px;
+    font-weight: lighter !important;
+    line-height:25px;
+    color: #fff !important;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #00b8e2;
+    border-radius:50px;
+    position: relative;
+    top: 0;
+    height: 25px;
+    width: 25px;
+}
+
+.btn-md {
+    width: 230px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.page-node-86 #trading-tools .dark h2 {
+    margin-top: 0px;
+}
+.page-node-86 #one-mt4-mobile .phone-img-container {
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 449px) {
+    .page-node-86 .base-feature .right-device-img img{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 991px){
+    .page-node-86 .dark p {
+        /*color: #000;*/
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 991px){
+    .page-node-86 .base-feature
+    {
+        /*background-color: #f2f2f2;*/
+    }
+    .page-node-86 .base-feature {
+        /*background-image : none !important;*/
+        height: auto;
+    }
+
+}
+.page-node-86 .base-feature .mobile-view {
+    display: none !important;
+}
+.trading-three-steps .live_div_inner {
+    min-height: initial;
+}
+.page-node-86 .live_div_inner {
+    min-height: initial;
+}
+.page-node-86 .mainColumn {
+    min-height: 390px;
+}
+
+/**
+Trading Seminars/Webinars page
+ */
+.londoneng.page-node-12348 .views-field-field-profile-image img,
+.londoneng.page-node-12348 .views-field-field-speaker-profile-image img {
+    width: 100%;
+    height:auto;
+}
+.londoneng.page-node-12348 .views-field-field-speaker-profile-image {
+    width: 6em;
+}
+@media screen and (min-width: 320px) and (max-width: 700px){
+    .view-upcoming-seminar-webinar.table-responsive {
+        overflow-x: inherit;
+    }
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td.views-field-field-seminar-language,
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td.views-field-field-seminar-time,
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td.views-field-field-speaker,
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td.views-field-title,
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td.views-field-field-seminar-location,
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td.views-field-field-seminar-level,
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td.views-field-field-seminar-date {
+        overflow: hidden;
+    }
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td {
+        border-bottom: 1px solid #f7f7f7;
+
+    }
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td .seminar-elements {
+        height: 8em;
+        background-color: transparent;
+        line-height: 2em;
+
+    }
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td.views-field-field-speaker .seminar-elements {
+
+    }
+    .view-upcoming-seminar-webinar table tbody tr td.views-field-field-profile-image div.seminar-elements div.circle-profile-image-container {
+        top: 20%;
+        left: 4%;
+        position: relative;
+    }
+    .view-upcoming-seminar-webinar table tbody tr td.views-field-field-registration-link div.seminar-elements a.blue-gradient-btn {
+        width: 90%;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 991px){
+    .view-upcoming-seminar-webinar.table-responsive {
+        overflow-x: inherit;
+    }
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td .seminar-elements {
+        height: 8em;
+    }
+    .view-upcoming-seminar-webinar .views-table  tbody  tr td.views-field-field-speaker .seminar-elements {
+        /*line-height: 2em;*/
+    }
+    .view-upcoming-seminar-webinar table tbody tr td.views-field-field-profile-image div.seminar-elements div.circle-profile-image-container {
+        top: 20%;
+        left: 4%;
+        position: relative;
+    }
+    .view-upcoming-seminar-webinar table tbody tr td.views-field-field-registration-link div.seminar-elements a.blue-gradient-btn {
+        width: 90%;
+    }
+}
+@media screen and (min-width: 992px){
+    .view-upcoming-seminar-webinar.table-responsive {
+        overflow-x: inherit;
+    }
+}
+.view-upcoming-seminar-webinar.table-responsive {
+    border: none;
+}
+.view-upcoming-seminar-webinar {
+    margin-bottom: 40px;
+}
+.view-upcoming-seminar-webinar .view-header h2 {
+    color: #00b8e2;
+}
+.view-upcoming-seminar-webinar table thead tr th {
+    border: none;
+}
+.view-upcoming-seminar-webinar table thead tr th.views-field-field-seminar-date .icon-holder {
+    background-image: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/dateicon.png");
+    height: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-bottom: 0;
+}
+.view-upcoming-seminar-webinar table thead tr th.views-field-field-seminar-time .icon-holder {
+    background-image: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/timeicon.png");
+    height: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-bottom: 0;
+}
+.view-upcoming-seminar-webinar table thead tr th.views-field-field-speaker-name .icon-holder {
+    background-image: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/speakericon.png");
+    height: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-bottom: 0;
+}
+.view-upcoming-seminar-webinar table thead tr th.views-field-title .icon-holder {
+    background-image: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/subjecticon.png");
+    height: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-bottom: 0;
+}
+.view-upcoming-seminar-webinar table thead tr th.views-field-field-seminar-location .icon-holder {
+    background-image: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/whereicon.png");
+    height: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-bottom: 0;
+}
+.view-upcoming-seminar-webinar table thead tr th.views-field-field-seminar-language .icon-holder {
+    background-image: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/languageicon.png");
+    height: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-bottom: 0;
+}
+.view-upcoming-seminar-webinar table thead tr th.views-field-field-seminar-level .icon-holder {
+    background-image: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/levelicon.png");
+    height: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-bottom: 0;
+}
+.view-upcoming-seminar-webinar table thead tr th.views-field-field-registration-link .icon-holder {
+    background-image: url("https://cdn-resources.onefinancialmarkets.com/sites/default/files/registrationicon.png");
+    height: 30px;
+    background-repeat:no-repeat;
+    background-position: center center;
+    margin-bottom: 0;
+}
+.view-upcoming-seminar-webinar table tbody tr td.views-field-field-registration-link a.blue-gradient-btn {
+    width: 60%;
+    margin-top: 0;
+}
+.view-upcoming-seminar-webinar table tbody tr {
+    /*background-color: #f7f7f7;*/
+    margin-bottom: 20px;
+}
+.view-upcoming-seminar-webinar table tbody tr td.views-field {
+    vertical-align: inherit;
+}
+.view-upcoming-seminar-webinar table tbody tr td {
+    padding: 0;
+    border: none;
+}
+.view-upcoming-seminar-webinar .views-field-field-speaker-profile-image .seminar-elements {
+    text-align: left;
+}
+.view-upcoming-seminar-webinar table tbody tr td .seminar-elements {
+    height: 4em;
+    line-height: 4em;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.view-upcoming-seminar-webinar table tbody tr td.views-field-field-profile-image {
+    width: 6%;
+}
+.view-upcoming-seminar-webinar table tbody tr td.views-field-field-profile-image .seminar-elements,
+.view-upcoming-seminar-webinar table tbody tr td.views-field-field-speaker-profile-image .seminar-elements  {
+    position: relative;
+}
+.view-upcoming-seminar-webinar table tbody tr td.views-field-field-profile-image .seminar-elements .circle-profile-image-container,
+.view-upcoming-seminar-webinar table tbody tr td.views-field-field-speaker-profile-image .seminar-elements .circle-profile-image-container  {
+    display: block;
+    height: 60px;
+    width: 60px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    overflow: hidden;
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    -webkit-box-shadow: 1px 2px 5px #8c8a8a;
+    -moz-box-shadow: 1px 2px 5px #8c8a8a;
+    box-shadow: 1px 2px 5px #8c8a8a;
+}
+.questions-banner {
+    background-color: #002f5d;
+}
+@media screen and (max-width: 992px){
+    div.seminar-webinar-banner-container-fixed .button-container a.btn{
+        width: 50%;
+        float: none !important;
+    }
+}
+div.seminar-webinar-banner-container-fixed {
+    background-color: #002f5d;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.seminar-webinar-banner-container-fixed .text-container span {
+    color: #00b8e2;
+    font-size: 30px;
+}
+@media screen and (min-width: 992px ) and (max-width: 1199px){
+    .londoneng.page-node-12348 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/seminar--monitor.jpg');
+        background-repeat:no-repeat;
+        background-position: 125% 163px;
+        background-size: auto 15%;
+    }
+}
+@media screen and (min-width: 1200px ) and (max-width: 1449px){
+    .londoneng.page-node-12348 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/seminar--monitor.jpg');
+        background-repeat:no-repeat;
+        background-position: 120% 170px;
+        background-size: auto 17%;
+    }
+}
+@media screen and (min-width: 1450px ) and (max-width: 1639px){
+    .londoneng.page-node-12348 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/seminar--monitor.jpg');
+        background-repeat:no-repeat;
+        background-position: 124% 178px;
+    }
+}
+@media screen and (min-width: 1640px){
+    .londoneng.page-node-12348 #page-content {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/seminar--monitor.jpg');
+        background-repeat:no-repeat;
+        background-position: 100% 10%;
+    }
+}
+
+.londoneng.page-node-12348 div.intro-container {
+    background-color: transparent;
+}
+.londoneng.page-node-12348 .multigroup {
+    margin-top: 30px;
+}
+@media screen and (max-width: 720px ) {
+    .londoneng.page-node-12348 .prev-event-table tbody tr td a.blue-gradient-btn{
+        width: 100%;
+    }
+}
+.londoneng.page-node-12348 .multigroup .table-responsive{
+    border: none;
+}
+.londoneng.page-node-12348 .multigroup {
+
+}
+.londoneng.page-node-12348 .multigroup h2 {
+    color: #00b8e2;
+    text-transform: uppercase;
+}
+.londoneng.page-node-12348 .multigroup .item-text {
+    display: block;
+}
+.londoneng.page-node-12348 .prev-event-table tbody tr td {
+    padding: 2px 10px;
+}
+.londoneng.page-node-12348 .prev-event-table tr td a.blue-gradient-btn {
+    width: 50%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.londoneng.page-node-12348 .prev-event-table tr td {
+    border: none;
+    vertical-align: inherit;
+}
+.londoneng.page-node-12348 .prev-event-table tr {
+    border-bottom: 4px solid #fff;
+}
+.londoneng.page-node-12348 .prev-event-table tr:nth-of-type(2n+1) {
+    background-color: #e9ebed;
+}
+.londoneng.page-node-12348 .prev-event-table tr:nth-of-type(2n+2) {
+    background-color: #f7f7f7;
+}
+/**
+Yasmeen Page
+ */
+.londoneng.page-node-12414 #mainBanner {
+    margin-bottom: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .londoneng.page-node-12414 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/yasmeenwomen.jpg');
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-size: 500px;
+        padding-top: 20px;
+    }
+}
+@media screen and (min-width: 1201px) {
+    .londoneng.page-node-12414 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/yasmeenwomen.jpg');
+        background-position: 80% 0%;
+        background-repeat: no-repeat;
+        background-size: 600px;
+        padding-top: 20px;
+    }
+}
+.londoneng.page-node-12414 #map {
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .londoneng.page-node-12414 #map {
+        margin-top: 30px;
+    }
+}
+.londoneng.page-node-12414 #page-content .container {
+    background-color: transparent;
+}
+.londoneng.page-node-12414 h2,
+.londoneng.page-node-12414 h1 {
+    color: #5b5576;
+}
+.londoneng.page-node-12414 div.yasmeentextlight div h2{
+    color: #9c7794;
+}
+.londoneng.page-node-12414 div.row.color-normal div > h2 {
+    color: #fff;
+    margin-top: 0;
+}
+.londoneng div.color-normal div a.btn {
+    margin-top: 0;
+}
+.londoneng .base-feature.bf-2 .mobile-view {
+    height: 10px;
+}
+form#yasmeen-form .submit-wrapper #edit-submit{
+    width: 120px;
+}
+form#yasmeen-form .form-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form#yasmeen-form input.required.error {
+    border: 1px solid #fb7272;
+    border-radius: 5px;
+    padding: 2px;
+}
+form#yasmeen-form fieldset.captcha legend {
+    display: none;
+}
+/**
+PRODUCT Library  page
+ */
+.londoneng.page-node-12697 .container-wrapper{
+    padding-top: 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .londoneng.page-node-12697 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/marketlibbg.jpg');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 60%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .londoneng.page-node-12697 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/marketlibbg.jpg');
+        background-repeat: no-repeat;
+        background-position: 130% 0%;
+        background-size:68%;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px){
+    .londoneng.page-node-12697 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/marketlibbg.jpg');
+        background-repeat: no-repeat;
+        background-position: 116% top;
+        background-size:68%;
+    }
+}
+@media screen and (min-width: 1401px) and (max-width: 1500px){
+    .londoneng.page-node-12697 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/marketlibbg.jpg');
+        background-repeat: no-repeat;
+        background-position: 150% 0%;
+        background-size: auto;
+    }
+}
+@media screen and (min-width: 1501px){
+    .londoneng.page-node-12697 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/marketlibbg.jpg');
+        background-repeat: no-repeat;
+        background-position: 108% 50%;
+        background-size: auto;
+    }
+}
+.londoneng.page-node-12697 #mainBanner {
+    margin-bottom: 0;
+}
+.londoneng.page-node-12697 div.container {
+    background-color: transparent;
+}
+.londoneng.page-node-12697 .base-feature:nth-of-type(2n+1) {
+    background-color: #f2f2f2;
+}
+.londoneng.page-node-12697 .base-feature h2 {
+    color: #002f5d;
+}
+.londoneng.page-node-12697 .base-feature p {
+    color: #333333;
+}
+.londoneng.page-node-12697 .btn-container > a {
+    width: 110px;
+}
+.londoneng.page-node-12697 .base-feature .text-container {
+    min-height: 100px;
+}
+.londoneng.page-node-12697 .base-feature .container .row.dark > div {
+    margin-bottom: 20px;
+}
+/*
+Spread Betting page
+ */
+.londoneng.page-node-15551 #mainBanner {
+    margin-bottom: 0;
+}
+.londoneng.node-type-page .container-wrapper{
+    padding-top: 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px){
+    .londoneng.page-node-15551 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/spreadbettinggraphic.jpg');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 50%;
+    }
+}
+@media screen and (min-width: 1200px) and (max-width: 1499px) {
+    .londoneng.page-node-15551 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/spreadbettinggraphic.jpg');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 54%;
+    }
+}
+@media screen and (min-width: 1500px) {
+    .londoneng.page-node-15551 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/spreadbettinggraphic.jpg');
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+}
+.londoneng.page-node-15551 .container-wrapper .container {
+    background-color: transparent;
+}
+.londoneng.page-node-15551 .row img {
+    width: auto;
+    height: auto;
+}
+.londoneng.page-node-15551 .base-feature.bf-1 .row  h2 {
+    margin-top: 0;
+}
+.londoneng.page-node-15551 .base-feature.bf-1 {
+    padding-top: 10px;
+}
+
+
+/** --------------
+Contact us page
+ ----------------*/
+.btn-small {
+    width: 100px;
+}
+.vr-wrapper .container iframe{
+    width: 100%;
+    height: 400px;
+    border: 1px solid transparent;
+}
+.vr-wrapper .container {
+    background-color: transparent;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+}
+.vr-wrapper .vr-overlay {
+    position: absolute;
+    background-color: rgba(0, 46, 96, 0.4);
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 0;
+}
+.vr-wrapper .vr-overlay h4{
+    margin-top: 10%;
+    color: #fff;
+
+}
+.vr-wrapper{
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/open-account-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+ul.nav-tabs li.active a,
+ul.market-cat-tab li.active a {
+    border-top: 3px solid #00b8e2 !important;
+    background-color: #fff;
+}
+ul.nav-tabs li a,
+ul.market-cat-tab li a {
+    color: #00b8e2;
+    background-color: #ebebeb;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    border-right: none;
+    border-bottom: none;
+    margin-right: 3px !important;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.grey-border-box {
+
+    background-color: #ebebeb;
+    border: 1px solid transparent;
+}
+.grey-border-box h4 {
+    color: #00b8e2;
+    font-size: 30px;
+}
+.page-node-12704 .base-feature .grey-border-box {
+    padding-top: 20px;
+    padding-bottom: 75%;
+    margin-bottom: 5px;
+}
+.page-node-86 .base-feature .three-steps .live-btn-container,
+.page-node-25768 .base-feature .three-steps .live-btn-container {
+    margin-top: 15%;
+}
+.page-node-26836 #mainBanner,
+.page-node-86 #mainBanner,
+.page-node-87 #mainBanner,
+.page-node-25768 #mainBanner,
+.page-node-12704 #mainBanner {
+    display:none;
+}
+.page-node-12704 .userguidecontainer {
+    margin-bottom: -10px;
+}
+.margin-bottom-neg-10 {
+    margin-bottom: -10px;
+}
+.page-node-12704 .demo-form {
+    padding-bottom: 0px;
+}
+.page-node-12704 .container-wrapper {
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/client-portaloffice-bg.jpg');
+}
+.page-node-86 .container-wrapper {
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/mt4platf_.jpg');
+}
+.uae-arabic.page-node-86 .container-wrapper {
+    background-image: url('https://cdn-resources.onefinancialmarkets.me/sites/arabic/files/mt4reverse.jpg');
+}
+.page-node-26836 .container-wrapper ,
+.page-node-26380 .container-wrapper {
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/equities-ofm-mainbanner.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@media screen and (min-width: 768px) and (max-width: 1061px){
+    .page-node-86 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/mt4platf_.jpg');
+        background-position: 37% center;
+    }
+    .uae-arabic.page-node-86 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.me/sites/arabic/files/mt4reverse.jpg');
+        background-position: 37% center;
+    }
+}
+@media screen and (min-width: 1062px){
+    .page-node-86 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/mt4platf_.jpg');
+        background-position: center center;
+    }
+    .uae-arabic.page-node-86 .container-wrapper {
+        background-image: url('https://cdn-resources.onefinancialmarkets.me/sites/arabic/files/mt4reverse.jpg');
+        background-position: top right;
+    }
+}
+.page-node-87 .container-wrapper {
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/office-interiror-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.page-node-86 .base-feature .row .grey-border-box,
+.page-node-25768 .base-feature .row .grey-border-box {
+    padding-top: 20px;
+    padding-bottom: 75%;
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 450px){
+    .page-node-86 .base-feature .row .grey-border-box,
+    .page-node-25768 .base-feature .row .grey-border-box {
+        padding-bottom: 55%;
+        margin-bottom: 5px;
+    }
+}
+@media screen and (min-width: 451px) and (max-width: 700px){
+    .page-node-86 .base-feature .row  .grey-border-box,
+    .page-node-25768 .base-feature .row  .grey-border-box {
+        padding-bottom: 39%;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 769px){
+    .page-node-86 .base-feature .row .grey-border-box,
+    .page-node-25768 .base-feature .row .grey-border-box {
+        padding-bottom: 25%;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .page-node-86 .base-feature .row .grey-border-box ,
+    .page-node-25768 .base-feature .row .grey-border-box {
+        padding-bottom: 136%;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .page-node-86 .base-feature .row .grey-border-box,
+    .page-node-25768 .base-feature .row .grey-border-box {
+        padding-bottom: 85%;
+        margin-bottom: 10px;
+    }
+}
+/** --------------
+Economic Calendar page
+ ----------------*/
+
+@media screen and (min-width: 769px){
+    .londoneng a.ec_launch {
+        background-color: #e44f17;
+        padding: 4px 5px 5px 25px;
+        color: white;
+        border: 1px solid #fc652b;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        background-image: url('/themes/oneresponsivev2/plugin/news-desk/images/popup.gif');
+        background-repeat: no-repeat;
+        background-position: 5px center;
+    }
+}
+
+
+/*------------------
+Accounts Sub menu Block
+----------------- */
+.londoneng .main-sub-menu {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.londoneng .main-sub-menu .itemOuter.submenu-2019-refresh .item {
+    background-image: none;
+    border: none;
+}
+.londoneng .main-sub-menu .itemOuter.submenu-2019-refresh .inner {
+    margin-top: 25px;
+}
+.londoneng .main-sub-menu .itemOuter.submenu-2019-refresh{
+    border-bottom: 2px solid #f2f2f2;
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .londoneng .main-sub-menu .itemOuter.submenu-2019-refresh{
+        height: 0px;
+        padding-bottom: 44%;
+        overflow: hidden;
+        border-bottom: 2px solid #f2f2f2;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+    .londoneng .main-sub-menu .itemOuter.submenu-2019-refresh{
+        height: 0px;
+        padding-bottom: 29%;
+        overflow: hidden;
+        border-bottom: 2px solid #f2f2f2;
+    }
+}
+@media screen and (min-width: 1200px){
+    .londoneng .main-sub-menu .itemOuter.submenu-2019-refresh{
+        height: 0px;
+        padding-bottom: 25%;
+        overflow: hidden;
+        border-bottom: 2px solid #f2f2f2;
+    }
+}
+.londoneng .main-sub-menu .itemOuter.submenu-2019-refresh.last-item,
+.londoneng .main-sub-menu .itemOuter.submenu-2019-refresh.second-last-item{
+    border-bottom: 2px solid transparent ;
+}
+
+.londoneng .main-sub-menu .itemOuter.submenu-2019-refresh  a {
+    text-decoration: underline;
+}
+.table-shares thead {
+    background-color: #000;
+}
+.table-shares thead th {
+    color: #24bce2;
+}
+.table-shares tbody tr {
+    border-bottom: 1px solid #cfcfcf;
+}
+.table-shares tbody tr:nth-child(odd) {
+    background-color: #e6f2f5; }
+.table-shares.table2 tbody tr:nth-child(even) {
+    background-color: #e6f2f5;
+}
+.table-shares.table2 tbody tr:nth-child(odd) {
+    background-color: #ffff;
+}
+.table-shares.table2 tbody tr:first-child {
+    background-color: #cccccc;
+}
+.table-shares.table2 tbody tr:first-child td {
+    font-weight: bold;
+}

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+    body {
+        font: 10px sans-serif;
+        padding:0px;
+        margin: 0;
+        background-color:#ffffff;
+    }
+	body.found {
+        background-color:#f3f3f3;
+	}
+
+	.cool-chart-container {
+        background-color:#f3f3f3;
+        padding:5px;
+	}
+
+	.chart-periods {
+        display:none;
+	}
+
+
+	.cool-chart svg {
+		border:1px solid #cccccc;
+	}
+	
+	.cool-chart svg {
+		background-color:#ffffff;
+	}
+    text {
+        fill: #000;
+    }
+
+    text.company {
+        fill: #333333;
+        font-size:13px;
+    }
+    
+    text.symbol {
+        fill: #333333;
+        font-size:15px;
+    }
+    
+    text.ohlcdate, text.ohlcopen, text.ohlchigh, text.ohlclow, text.ohlcclose {
+        fill: #333333;
+        font-size:11px;
+    }    
+
+    path {
+        fill: none;
+        stroke-width: 1;
+    }
+
+    path.candle {
+        stroke: #000000;
+    }
+
+    path.candle.body {
+        stroke-width: 0;
+    }
+
+    path.candle.up {
+        fill: #00AA00;
+        stroke: #00AA00;
+    }
+
+    path.candle.down {
+        fill: #FF0000;
+        stroke: #FF0000;
+    }
+
+    .close.annotation.up path {
+        fill: #00AA00;
+    }
+
+    path.volume {
+        fill: #DDDDDD;
+    }
+
+    .indicator-plot path.line {
+        fill: none;
+        stroke-width: 1;
+    }
+
+    .ma-0 path.line {
+        stroke: #1f77b4;
+    }
+
+    .ma-1 path.line {
+        stroke: #aec7e8;
+    }
+
+    .ma-2 path.line {
+        stroke: #ff7f0e;
+    }
+
+    button {
+        position: absolute;
+        right: 110px;
+        top: 25px;
+    }
+
+    path.macd {
+        stroke: #0000AA;
+    }
+
+    path.signal {
+        stroke: #FF9999;
+    }
+
+    path.zero {
+        stroke: #BBBBBB;
+        stroke-dasharray: 0;
+        stroke-opacity: 0.5;
+    }
+
+    path.difference {
+        fill: #BBBBBB;
+        opacity: 0.5;
+    }
+
+    path.rsi {
+        stroke: #000000;
+    }
+
+    path.overbought, path.oversold {
+        stroke: #FF9999;
+        stroke-dasharray: 5, 5;
+    }
+
+    path.middle, path.zero {
+        stroke: #BBBBBB;
+        stroke-dasharray: 5, 5;
+    }
+
+    .analysis path, .analysis circle {
+        stroke: blue;
+        stroke-width: 0.8;
+    }
+
+    .trendline circle {
+        stroke-width: 0;
+        display: none;
+    }
+
+    .mouseover .trendline path {
+        stroke-width: 1.2;
+    }
+
+    .mouseover .trendline circle {
+        stroke-width: 1;
+        display: inline;
+    }
+
+    .dragging .trendline path, .dragging .trendline circle {
+        stroke: darkblue;
+    }
+
+    .interaction path, .interaction circle {
+        pointer-events: all;
+    }
+
+    .interaction .body {
+        cursor: move;
+    }
+
+    .trendlines .interaction .start, .trendlines .interaction .end {
+        cursor: nwse-resize;
+    }
+
+    .supstance path {
+        stroke-dasharray: 2, 2;
+    }
+
+    .supstances .interaction path {
+        pointer-events: all;
+        cursor: ns-resize;
+    }
+
+    .mouseover .supstance path {
+        stroke-width: 1.5;
+    }
+
+    .dragging .supstance path {
+        stroke: darkblue;
+    }
+
+    .crosshair {
+        cursor: crosshair;
+    }
+
+    .crosshair path.wire {
+        stroke: #DDDDDD;
+        stroke-dasharray: 1, 1;
+    }
+
+    .crosshair .axisannotation path {
+        fill: #DDDDDD;
+    }
+
+    .tradearrow path.tradearrow {
+        stroke: none;
+    }
+
+    .tradearrow path.buy {
+        fill: #0000FF;
+    }
+
+    .tradearrow path.sell {
+        fill: #9900FF;
+    }
+
+    .tradearrow path.highlight {
+        fill: none;
+        stroke-width: 2;
+    }
+
+    .tradearrow path.highlight.buy {
+        stroke: #0000FF;
+    }
+
+    .tradearrow path.highlight.sell {
+        stroke: #9900FF;
+    }
+	.clearfix {
+		clear:both;
+	}
+	.chart-periods {
+
+	}
+	.chart-period {
+		padding: 5px 10px;
+		border:1px solid #cccccc;
+		background-color:white;
+		margin-right:5px;
+		margin-bottom:5px;
+		float:left;
+		cursor: pointer;
+	}
+	.chart-period:hover {
+		background-color:#f1f1f1;
+	}	
+	.symbol-list {
+		float:left;
+		margin-right:10px;
+		display:none;
+	}
+	#symbol-list-form {
+		padding:3px 5px;
+		border:1px solid #cccccc;
+	}	
+</style>
+<body>
+<div class="cool-chart-container">
+	<div class="chart-periods">
+		<div class="symbol-list">
+			<select name="symbol-list" id="symbol-list-form">
+			</select>
+		</div>
+		<div class="chart-period" data-id="M1" data-name="1 min">1 min</div>
+		<div class="chart-period" data-id="M5" data-name="5 min">5 min</div>
+		<div class="chart-period" data-id="M15" data-name="15 min">15 min</div>
+		<div class="chart-period" data-id="M30" data-name="30 min">30 min</div>
+		<div class="chart-period" data-id="H1" data-name="1 hour">1 hour</div>
+		<div class="chart-period" data-id="D1" data-name="1 day">1 day</div>
+<!-- 		<div class="chart-period" data-id="W1" data-name="1 week">1 week</div> -->
+		<div class="clearfix"></div>
+	</div>
+	
+	<div class="cool-chart"></div>
+</div>
+
+<div class="content"></div>
+<script src="/widgets/library-js/jquery-3.1.1/jquery.min.js"></script>
+<script src="/widgets/library-js/d3js/d3.v4.min.js"></script>
+<script src="/widgets/library-js/techan-0.8.0/techan.min.js"></script>
+<script>
+
+var Trade = Trade || {};
+
+Trade.chart = {
+	container: null,
+	url: "data.php",
+	urlSymbols: "symbols.php",
+	data: null,
+	w: 0,
+	h: 0,
+	firstRequest: 0,
+	pro: null,
+	options: null,	
+	init: function() {
+
+		//$(this.options.container).show();
+		data = this.data;
+
+		if(data == null || data.size==0) {
+			console.log("CHART IS NULL");
+		}
+
+	    var dim = {
+	        width: this.w, height: this.h,
+	        margin: { top: 20, right: 50, bottom: 30, left: 0 },
+	        ohlc: { height: this.h-50 }
+	//         indicator: { height: 65, padding: 5 }
+	    };
+	    dim.plot = {
+	        width: dim.width - dim.margin.left - dim.margin.right,
+	        height: dim.height - dim.margin.top - dim.margin.bottom
+	    };
+	    	
+	    var parseDate = d3.timeParse("%Y-%m-%d %H:%M:%S");
+	    //var parseDate = d3.timeParse("%d-%b-%y");
+	
+	    var zoom = d3.zoom()
+	            .on("zoom", zoomed);
+	
+	    var x = techan.scale.financetime()
+	            .range([0, dim.plot.width]);
+	
+	    var y = d3.scaleLinear()
+	            .range([dim.ohlc.height, 0]);
+		
+	    var yPercent = y.copy();   // Same as y at this stage, will get a different domain later
+	
+	    var yInit, yPercentInit, zoomableInit;
+	
+	    var yVolume = d3.scaleLinear()
+	            .range([y(0), y(0.2)]);
+	
+	    var candlestick = techan.plot.candlestick()
+	            .xScale(x)
+	            .yScale(y);
+	
+	    var volume = techan.plot.volume()
+	            .accessor(candlestick.accessor())   // Set the accessor to a ohlc accessor so we get highlighted bars
+	            .xScale(x)
+	            .yScale(yVolume);
+	
+	    var xAxis = d3.axisBottom(x);
+	
+	    var timeAnnotation = techan.plot.axisannotation()
+	            .axis(xAxis)
+	            .orient('bottom')
+	            .format(d3.timeFormat('%Y-%m-%d'))
+	            .width(65)
+	            .translate([0, dim.plot.height]);
+	
+	    var yAxis = d3.axisRight(y);
+	
+	    var ohlcAnnotation = techan.plot.axisannotation()
+	            .axis(yAxis)
+	            .orient('right')
+	            .format(d3.format(',.5f'))
+	            .translate([x(1), 0]);
+	
+	    var closeAnnotation = techan.plot.axisannotation()
+	            .axis(yAxis)
+	            .orient('right')
+	            .accessor(candlestick.accessor())
+	            .format(d3.format(',.5f'))
+	            .translate([x(1), 0]);
+	
+
+	    var volumeAxis = d3.axisRight(yVolume)
+	            .ticks(3)
+	            .tickFormat(d3.format(",.3s"));
+	
+	    var volumeAnnotation = techan.plot.axisannotation()
+	            .axis(volumeAxis)
+	            .orient("right")
+	            .width(35);
+	
+	    var ohlcCrosshair = techan.plot.crosshair()
+	    		.on("move", move)
+	            .xScale(timeAnnotation.axis().scale())
+	            .yScale(ohlcAnnotation.axis().scale())
+	            .xAnnotation(timeAnnotation)
+	            .yAnnotation([ohlcAnnotation, volumeAnnotation])
+	            .verticalWireRange([0, dim.plot.height]);
+
+
+	    
+		function move(coords) {
+		    var ohlcopen = d3.select(".ohlcopen");			
+		    var ohlchigh = d3.select(".ohlchigh");			
+		    var ohlclow = d3.select(".ohlclow");			
+		    var ohlcclose = d3.select(".ohlcclose");			
+		    var ohlcdate = d3.select(".ohlcdate");			
+
+			var myData = $.grep(data, function(e) { 
+				return e.date == coords.x; 
+			});  
+
+			var myd = null;
+			if(myData!=null && myData.length>0) {
+				myd = myData[0];
+				
+			    ohlcdate.text("DATE: "+myd.date);
+			    ohlcopen.text("OPEN: "+myd.open);
+			    ohlchigh.text("HIGH: "+myd.high);
+			    ohlclow.text("LOW: "+myd.low);
+			    ohlcclose.text("CLOSE: "+myd.close);
+			}
+			else {
+
+			}
+		}
+	            
+	    d3.select(this.container+" svg").remove();
+	    
+	    var svg = d3.select(this.container).append("svg")
+	            .attr("width", dim.width)
+	            .attr("height", dim.height);
+	
+	    var defs = svg.append("defs");
+	
+	    defs.append("clipPath")
+	            .attr("id", "ohlcClip")
+	        .append("rect")
+	            .attr("x", 0)
+	            .attr("y", 0)
+	            .attr("width", dim.width-dim.margin.right)
+	            .attr("height", dim.ohlc.height);
+	
+	    svg = svg.append("g")
+	            .attr("transform", "translate(" + dim.margin.left + "," + dim.margin.top + ")");
+	
+	    svg.append('text')
+	            .attr("class", "company")
+	            .attr("x", 15)
+	            .attr("y", 10)
+	            .text("One Financial Markets");
+
+		
+		
+	    svg.append('text')
+		        .attr("class", "symbol")
+		        .attr("x", 15)
+		        .attr("y", 25)
+		        .text(this.options.symbol+" "+this.options.period_name);
+
+	    svg.append('text')
+	        .attr("class", "ohlcdate")
+	        .attr("x", 15)
+	        .attr("y", 40)
+	        .text("");
+
+	    svg.append('text')
+	        .attr("class", "ohlcopen")
+	        .attr("x", 15)
+	        .attr("y", 55)
+	        .text("");
+
+	    svg.append('text')
+	        .attr("class", "ohlchigh")
+	        .attr("x", 15)
+	        .attr("y", 70)
+	        .text("");
+
+	    svg.append('text')
+	        .attr("class", "ohlclow")
+	        .attr("x", 15)
+	        .attr("y", 85)
+	        .text("");
+
+	    svg.append('text')
+	        .attr("class", "ohlcclose")
+	        .attr("x", 15)
+	        .attr("y", 100)
+	        .text("");
+		    
+ 	    
+	    svg.append("g")
+	            .attr("class", "x axis")
+	            .attr("transform", "translate(0," + dim.plot.height + ")");
+	
+	    var ohlcSelection = svg.append("g")
+	            .attr("class", "ohlc")
+	            .attr("transform", "translate(0,0)");
+	
+	    ohlcSelection.append("g")
+	            .attr("class", "axis")
+	            .attr("transform", "translate(" + x(1) + ",0)")
+	        .append("text")
+	            .attr("transform", "rotate(-90)")
+	            .attr("y", -12)
+	            .attr("dy", ".71em")
+	            .style("text-anchor", "end")
+	            .text("Price ($)");
+	
+	    ohlcSelection.append("g")
+	            .attr("class", "close annotation up");
+	
+	    ohlcSelection.append("g")
+	            .attr("class", "volume")
+	            .attr("clip-path", "url(#ohlcClip)");
+	
+	    ohlcSelection.append("g")
+	            .attr("class", "candlestick")
+	            .attr("clip-path", "url(#ohlcClip)");
+	
+	    ohlcSelection.append("g")
+	            .attr("class", "percent axis");
+	
+	    ohlcSelection.append("g")
+	            .attr("class", "volume axis");
+	
+	    svg.append('g')
+	            .attr("class", "crosshair ohlc");
+	
+	    svg.append("g")
+	            .attr("class", "tradearrow")
+	            .attr("clip-path", "url(#ohlcClip)");
+
+
+
+	        
+        var accessor = candlestick.accessor();
+        var indicatorPreRoll = 100;  // Don't show where indicators don't have data
+
+        data = data.map(function(d) {
+	        return {
+                date: parseDate(d.ctm),
+                open: +d.open,
+                high: +d.high,
+                low: +d.low,
+                close: +d.close,
+                volume: +d.volume
+            };
+        });
+
+        //data = data.slice(data.length-365, data.length);
+        
+        data.sort(function(a, b) { 
+	        return d3.ascending(accessor.d(a), accessor.d(b)); 
+	    });
+
+//         console.log(data.slice(0,100));
+
+        x.domain(techan.scale.plot.time(data).domain());
+        // Control the plotting of the right hand line
+        y.domain(techan.scale.plot.ohlc(data.slice(data.length-100,data.length)).domain());
+        yPercent.domain(techan.scale.plot.percent(y, accessor(data[indicatorPreRoll])).domain());
+        yVolume.domain(techan.scale.plot.volume(data).domain());
+
+        svg.select("g.candlestick").datum(data).call(candlestick);
+        svg.select("g.close.annotation").datum([data[data.length-1]]).call(closeAnnotation);
+        svg.select("g.volume").datum(data).call(volume);
+        svg.select("g.crosshair.ohlc").call(ohlcCrosshair).call(zoom);
+        svg.select("g.crosshair.ohlc").call(ohlcCrosshair);
+
+        // Stash for zooming
+        zoomableInit = x.zoomable().domain([data.length-80, data.length]).copy(); // Zoom in a little to hide indicator preroll
+        yInit = y.copy();
+        yPercentInit = yPercent.copy();
+
+
+        draw();
+	
+	    function reset() {
+	        zoom.scale(1);
+	        zoom.translate([0,0]);
+	        draw();
+	    }
+	
+	    function zoomed() {
+		    console.log("zoomed");
+	        x.zoomable().domain(d3.event.transform.rescaleX(zoomableInit).domain());
+	        y.domain(d3.event.transform.rescaleY(yInit).domain());
+	        yPercent.domain(d3.event.transform.rescaleY(yPercentInit).domain());
+	        	
+	        draw();
+	    }
+	
+	    function draw() {
+	        svg.select("g.x.axis").call(xAxis);
+	        svg.select("g.ohlc .axis").call(yAxis);
+	        svg.select("g.volume.axis").call(volumeAxis);
+	        // We know the data does not change, a simple refresh that does not perform data joins will suffice.
+	        svg.select("g.candlestick").call(candlestick.refresh);
+	        svg.select("g.close.annotation").call(closeAnnotation.refresh);
+	        svg.select("g.volume").call(volume.refresh);
+	        svg.select("g.crosshair.ohlc").call(ohlcCrosshair.refresh);
+	    }
+	},
+	fetchData: function() {
+        var o = this;
+    	var requestUrl = this.url+"?period="+o.options.period+"&symbol="+o.options.symbol
+
+        //Replacing the 'and' back to 'ampersand' symbol
+        o.options.symbol = o.options.symbol.replace('and','&');
+        $.ajax({
+    	    type: 'GET',
+    	    url: requestUrl,
+    	    dataType: 'json',
+    	    success: function (data) {
+				o.data = data;
+		        if(data.length>0) {
+					$('.chart-periods').show();
+					o.init();
+		        	$(".body").addClass('found');
+		        	$(o.options.container).show();
+		        }
+		        else {
+					$('.cool-chart-container').hide();
+		        	$(o.options.container).hide();
+		        }
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+// 				$('.chart-periods').hide();
+				$('.cool-chart-container').hide();
+
+				console.error(XMLHttpRequest);
+				console.error(textStatus);
+				console.error(errorThrown);
+			}
+    	});    	
+	},
+	fetchSymbols: function() {
+        var o = this;
+    	var requestUrl = this.urlSymbols;
+        $.ajax({
+    	    type: 'GET',
+    	    url: requestUrl,
+    	    dataType: 'json',
+    	    success: function (data) {
+		        if(data.length>0) {
+		        	for(var i=0;i<data.length;i++) {
+			        	var selected = "";
+			        	if(o.options.symbol==data[i]) {
+							selected = " selected='selected'";
+			        	}
+			        	
+						$("#symbol-list-form").append("<option value='"+data[i]+"'"+selected+">"+data[i]+"</option>");
+					}
+		        	$("#symbol-list-form").change(function() {
+						o.options.symbol = $(this).val()
+						$(o.container).html('');				
+						o.start(o.options);
+		        	});
+		        }
+			}
+    	});    	
+	},
+    start: function(options) {
+        var o = this;
+
+        o.options = options;
+        o.container = options.graph;
+
+		this.pro = {
+			    width: 960, 
+			    height: 500
+		};  
+
+		if(o.firstRequest==0) {
+        	o.prepareButtons();
+        	o.resizable();	
+        	o.fetchSymbols();
+        }
+
+    	o.fetchData();
+
+    	o.firstRequest = 1;
+    },
+    prepareButtons: function() {
+        var o = this;
+		$('.chart-period').each(function(i) {
+			$(this).unbind( "click" );
+			$(this).click(function() {
+				o.options.period = $(this).attr("data-id");
+				o.options.period_name = $(this).attr("data-name");
+				$(o.container).html('');				
+				o.start(o.options);
+			});
+		});
+    },
+    resizable: function() {
+    	this.w = $(this.container).width()-20;
+    	this.h = this.w*(this.pro.height/this.pro.width);
+
+    	var o = this;
+    	
+    	$(window).resize(function() {
+    		o.w = $(o.container).width()-10;
+    		o.h = o.w*(o.pro.height/o.pro.width);
+
+    	    $(o.container).html('');
+    	    o.init();
+    	});  
+    }    
+}
+
+$(document).ready(function() {
+	var periodName = $('.chart-period[data-id="H1"]').attr('data-name');
+	var showChart = {
+		container: ".cool-chart-container",
+		graph: ".cool-chart",
+		symbol: "NZDCAD",
+		period: "H1",
+		period_name: periodName
+	}
+	Trade.chart.start(showChart);
+});
+
+</script>

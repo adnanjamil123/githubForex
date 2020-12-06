@@ -1,0 +1,25 @@
+DELIMITER $$
+
+CREATE PROCEDURE add_new_promotion(
+promotion_title VARCHAR(100), 
+promotion_description VARCHAR(700), 
+promotion_percentage INT)
+
+BEGIN
+
+DECLARE message VARCHAR(50);
+
+INSERT INTO promotion(promotion_title, promotion_description, promotion_percentage, promotion_datetime) VALUES(promotion_title, promotion_description, promotion_percentage, NOW());
+
+SET message = 'PROMOTION ADDED';
+
+SELECT message;
+
+
+END $$
+
+
+
+--------- Execute ---------------
+
+CALL add_new_promotion ('Welcome Bonus up to $500', '1. Bonus crediting is Instant and Automatic. 2. Deposit to maximize your bonus amount', 15);

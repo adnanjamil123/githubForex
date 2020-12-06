@@ -1,0 +1,45 @@
+DELIMITER $$
+
+CREATE PROCEDURE amount_deposit(
+deposit_account_email VARCHAR(250), 
+deposit_account_password VARCHAR(250), 
+deposit_method_type CHAR(25), 
+deposit_amount DECIMAL(15,4), 
+UserID_auth VARCHAR(250))
+
+
+BEGIN
+
+	DECLARE deposit_status CHAR(15);
+	DECLARE get_account_status CHAR(15);
+	DECLARE message VARCHAR(50);
+
+	SET get_account_status = (SELECT account_status FROM customer_account WHERE UserID = UserID_auth);
+
+	SET deposit_status = 'NOT APPROVED';
+
+	IF(get_account_status = 'VERIFIED')
+
+	THEN
+
+	INSERT INTO deposit(deposit_account_email, deposit_account_password, deposit_method_type, deposit_amount, deposit_status, deposit_datetime, UserID) VALUES(deposit_account_email, deposit_account_password, deposit_method_type, deposit_amount, deposit_status, NOW(), UserID_auth);
+	
+		SET message =  'PAYMENT DONE';
+
+
+	ELSE
+
+
+		SET message =  'PlEASE VERIFY YOUR ACCOUNT';
+
+	END IF;
+
+	SELECT message;
+
+END $$
+
+
+
+--------- Execute ---------------
+
+CALL amount_deposit ('adnanjamil@gmail.com', 'Abc@121', 'PAYPAL', 50, 8);

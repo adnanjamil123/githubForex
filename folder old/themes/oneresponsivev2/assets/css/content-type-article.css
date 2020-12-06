@@ -1,0 +1,5 @@
+@CHARSET "ISO-8859-1";
+
+.node-type-article .bodyContent p > span {
+  font-size: 15px;
+}

@@ -1,0 +1,37 @@
+DELIMITER $$
+
+CREATE PROCEDURE login_user(
+user_email_auth VARCHAR(250), 
+user_password_auth VARCHAR(250))
+
+BEGIN
+
+DECLARE message VARCHAR(50);
+
+IF EXISTS(SELECT * FROM users WHERE user_email = user_email_auth AND user_password = user_password_auth)
+
+	THEN
+		
+		SET message = 'SUCCESSFUL';
+		
+		SELECT message;
+
+
+ELSE
+
+		SET message = 'FAILED';
+		
+		SELECT message;
+
+END IF;
+
+END $$
+
+
+
+
+----------------- FOR EXECUTE -----------------
+
+
+
+CALL login_user('adnanjamil@gmail.com', 'Abc12345@');

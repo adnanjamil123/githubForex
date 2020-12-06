@@ -1,0 +1,110 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+
+</head>
+
+<body>
+
+<!-- COPY AND PASTE ONE FINANCIAL MARKETS WIDGET -->
+<div id="ofm-table-products">
+	<div id='ofm-table-products-container'>
+		<script type="text/javascript">
+        //<![CDATA[
+			var _ofmy = _ofmy || [];
+			_ofmy.push(['products', 'EURUSD,GBPUSD,USDCHF,USDJPY,AUDUSD,USDCAD,EURGBP,XAUUSD', 'ia_xxx','']);
+			
+			(function() {
+			var ofmj = document.createElement('script'); ofmj.type = 'text/javascript'; ofmj.async = true;
+			ofmj.src = '/widgets/table-products-v1/main.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ofmj, s);
+			})();
+        //]]>
+        </script>
+    </div>
+</div>
+<!-- END OF COPY PASTE ONE FINANCIAL MARKETS WIDGET -->
+<style>
+	@font-face {
+		font-family: 'AktivGroteskWeb';
+		font-weight: normal;
+		font-style: normal;
+		src: url('/themes/oneresponsivev2/fonts/AG_Web_Rg.eot');
+		src: local('AktivGroteskWeb'), 
+			url('../fonts/AG_Web_Rg.eot') format('embedded-opentype'),
+			url('../fonts/AG_Web_Rg.woff') format('woff'),
+			url('../fonts/AG_Web_Rg.ttf') format('truetype');
+	}
+	#ofm-table-products {
+		width:100%;
+	}
+	#ofm-table-products-container {
+		background-color: transparent;
+		border:none;
+	}
+
+	
+	#ofm-table-products-container table th, #ofm-table-products-container table td {
+		background-color: transparent;
+		border-bottom:1px solid #d9d9d9;
+		
+	}	
+	#ofm-table-products-container table th {
+		font-weight:bold;
+	}	
+	#ofm-table-products-container .product .direction {
+		width: 12px;
+	}	
+	#ofm-table-products-container .dir-up .direction {
+		background-image: url("ofm-up.png");
+	}
+	#ofm-table-products-container .dir-down .direction {
+		background-image: url("ofm-down.png");
+	}	
+	#ofm-table-products-container .dir-up .even .direction {
+		background-image: url("ofm-up.png");
+	}
+	#ofm-table-products-container .dir-down .even .direction {
+		background-image: url("ofm-down.png");
+	}	
+	
+	#ofm-table-products, #ofm-table-products td, #ofm-table-products th, #ofm-table-products h2 {
+		font-family: 'AktivGroteskWeb',Arial,Helvetica,sans-serif;
+	}
+	#ofm-table-products-container h2 {
+		background-image:none;
+		color:#2b2b2b;
+		background-color:#f8f8f8;
+		text-transform: uppercase;
+		border-top:1px solid #d9d9d9;
+		border-bottom:1px solid #d9d9d9;
+		font-weight:bold;
+		text-align: center;
+	}
+	#ofm-table-products-container table tr, #ofm-table-products-container table tr.even {
+		background-color: transparent;
+	}	
+	
+	#ofm-table-products-container td.buy, 
+	#ofm-table-products-container td.sell {
+
+	}	
+	
+	#ofm-table-products-container .dir-up td.buy, 
+	#ofm-table-products-container .dir-up td.sell {
+		background-color: transparent;
+		color:#4e914f;
+
+	}
+	#ofm-table-products-container .dir-down td.buy, 
+	#ofm-table-products-container .dir-down td.sell {
+		background-color: transparent;
+		color:#e44f52;
+	}
+	
+	
+</style>
+</body>
+</html>

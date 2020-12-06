@@ -1,0 +1,46 @@
+DELIMITER $$
+
+CREATE PROCEDURE apply_bonus(
+UserID_auth VARCHAR(250),
+apply_bonus_amount DECIMAL(15,4)
+)
+
+BEGIN
+
+DECLARE promotion_status CHAR(15);
+DECLARE get_account_virtual_balance DECIMAL(15,4);
+DECLARE new_balance DECIMAL(15,4);
+DECLARE message VARCHAR(50);
+
+SET promotion_status = 'APPROVED';
+SET get_account_virtual_balance = (SELECT account_virtual_balance FROM customer_account WHERE UserID = UserID_auth);
+SET new_balance = get_account_virtual_balance + apply_bonus_amount;
+
+IF EXISTS(SELECT * FROM users WHERE UserID = UserID_auth)
+
+	THEN
+	
+INSERT INTO bonus_request(UserID, amount, promotion_status, request_datetime) VALUES(UserID_auth, apply_bonus_amount, promotion_status, NOW());
+
+UPDATE customer_account SET account_virtual_balance = new_balance WHERE UserID = UserID_auth;
+UPDATE customer_account SET account_promotion_status = 'YES' WHERE UserID = UserID_auth;
+
+SET message = 'BONUS APPLIED';
+
+	ELSE
+
+		SET message = 'CUSTOMER NOT FOUND';
+		
+		
+
+END IF;
+
+SELECT message;
+
+
+END $$
+
+
+
+------------CALLING PROCEDURE----------
+CALL apply_bonus(13,500)

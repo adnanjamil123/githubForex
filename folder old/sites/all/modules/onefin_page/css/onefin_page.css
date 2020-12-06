@@ -1,0 +1,59 @@
+.page-node-12697 .container-wrapper {
+
+}
+.page-node-12697 ul.market-cat-tab {
+    border-bottom: none;
+}
+.page-node-12697 div.tab-content {
+    margin-top: 15px;
+}
+.page-node-12697 .market-lib-tabbed-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.page-node-12697 ul.market-cat-tab li.active a {
+    border-top: 3px solid #00b8e2 !important;
+    background-color: #fff;
+}
+.page-node-12697 ul.market-cat-tab li a {
+    color: #00b8e2;
+    background-color: #ebebeb;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-right: none;
+    border-bottom: none;
+    margin-right: 3px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.page-node-12697 .view-id-taxonomy_term.view-display-id-page_1 {
+    padding-left: 0;
+    padding-right: 0;
+}
+.page-node-12697 .view-id-taxonomy_term.view-display-id-page_1 thead tr th {
+    background-color: #fff;
+    color: #00b8e2;
+    border-right-color: #fff;
+    border-left-color: #fff;
+    font-weight: bold;
+    text-align: left;
+    min-width: 130px;
+    padding: 8px;
+}
+.page-node-12697 .view-id-taxonomy_term.view-display-id-page_1 thead {
+    border-bottom: 3px solid #e8e8e8;
+}
+.page-node-12697 .view-id-taxonomy_term.view-display-id-page_1 .views-table tbody tr td {
+    border-color: #f3f3f3;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#page-title {
+    color: #00b8e2;
+    text-transform: uppercase;
+}

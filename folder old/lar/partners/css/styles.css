@@ -1,0 +1,1390 @@
+/*
+FONTS
+ */
+
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v16-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Roboto'), local('Roboto-Regular'),
+    url('../fonts/roboto-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/roboto-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/roboto-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/roboto-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/roboto-v16-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* roboto-700 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v16-latin-700.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('../fonts/roboto-v16-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/roboto-v16-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/roboto-v16-latin-700.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/roboto-v16-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/roboto-v16-latin-700.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+
+/* =======================================================================
+Kane - Responsive App Landing Page 1.7
+======================================================================= */
+
+/* --------------------------------------
+=========================================
+GLOBAL STYLES
+=========================================
+-----------------------------------------*/
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: #262625;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #c8c8c8;
+    line-height: 28px;
+    text-align: center;
+    overflow-x: hidden !important;
+    margin: auto !important;
+}
+
+/* Internet Explorer 10 in Windows 8 and Windows Phone 8 Bug fix */
+
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+a {
+    -webkit-transition: all ease 0.25s;
+            transition: all ease 0.25s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn:focus,
+.btn:active {
+    outline: inherit;
+}
+
+textarea:focus, input:focus {
+    color: #ffffff;
+}
+/* Other fixes*/
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+ul,
+ol {
+    padding-left: 0 !important;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* PRE LOADER */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    z-index: 99999;
+    height: 100%;
+    width: 100%;
+    overflow: hidden !important;
+}
+
+.status {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(../images/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+            background-size: cover;
+    margin: -20px 0 0 -20px;
+}
+
+
+/*---------------------------------------
+   Typography                
+-----------------------------------------*/
+/* HEADINGS */
+
+h1,
+h2 {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;;
+}
+
+h1 {
+    font-size: 3.75rem;
+    line-height: 4.688rem;
+}
+
+h2 {
+    /*font-size: 3.125rem;*/
+    /*line-height: 4.063rem;*/
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/*---------------------------------------
+   CUSTOM BUTTON              
+-----------------------------------------*/
+
+.standard-button,
+.standard-button2 {
+    font-size: 18px;
+    font-weight: 400 !important;
+    border-radius: 4px !important;
+    text-shadow: 0 !important;
+    color: #ffffff;
+    min-width: 150px;
+    border: none;
+    padding: 16px 25px 16px 25px;
+    margin: 5px;
+    -webkit-transition: all ease 0.25s;
+            transition: all ease 0.25s;
+}
+
+.standard-button:hover,
+.standard-button2:hover {
+    border: none;
+}
+
+.standard-button i,
+.standard-button2 i {
+    vertical-align: inherit;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+
+/*---------------------------------------
+   TEXTS AND BG               
+-----------------------------------------*/
+
+.white-text {
+    color: #ffffff;
+}
+
+.dark-text {
+    color: #272727;
+}
+
+.deep-dark-bg {
+    background: #161616 !important;
+}
+
+
+/*---------------------------------------
+   SECTIONS          
+-----------------------------------------*/
+
+.section-header {
+    padding-bottom: 78px;
+}
+
+.section-header h2 {
+    margin-bottom: 20px;
+}
+
+.section-header .section-description {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*---------------------------------------
+   LINES          
+-----------------------------------------*/
+
+.colored-line {
+    margin: auto;
+    z-index: 1;
+    width: 165px;
+    height: 1px;
+}
+
+.white-line {
+    margin: auto;
+    z-index: 1;
+    width: 165px;
+    height: 1px;
+    background: #ffffff;
+}
+
+.colored-line-left {
+    float: left;
+    z-index: 1;
+    display: block;
+    width: 165px;
+    height: 1px;
+}
+
+/*---------------------------------------
+=========================================
+ **   SECTION STYLES                
+=========================================
+-----------------------------------------*/
+
+/*---------------------------------------
+   SECTION:  HOME                 
+-----------------------------------------*/
+
+header {
+    background: url(https://cdn-resources.onefinancialmarkets.com/sites/default/files/partnerdarkbg.jpg) no-repeat fixed;
+    -webkit-background-size: cover;
+            background-size: 100% auto;
+}
+header {
+    background-position: 0% 45%;
+}
+
+header .color-overlay {
+    min-height: 800px;
+    background-color: transparent;
+    position: relative;
+}
+
+header .full-screen {
+    width: 100%;
+    height: 100px;
+}
+
+/* TOP BAR WITH NAVIGATION */
+
+.sticky-navigation {
+  min-height: 60px;
+  background: #111111;
+  border: none;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  -webkit-backface-visibility: hidden;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+          box-shadow: 0px 2px 8px 0px rgba(50, 50, 50, 0.08);
+}
+
+.sticky-navigation .navbar-header img {
+  /*max-height: 30px;*/
+  -webkit-backface-visibility: hidden;
+}
+.navbar-brand img{
+    width: 100%;
+}
+@media screen and (max-width: 380px){
+    header .intro-section h2.intro {
+        font-size: 35px;
+    }
+}
+.sticky-navigation .main-navigation .current a {
+  color: #FFFFFF;
+  position: relative;
+  outline: none;
+}
+
+.sticky-navigation .main-navigation li a {
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #c8c8c8;
+}
+
+.non-sticky-navigation {
+    min-height: 60px;
+    border-color: transparent;
+}
+.non-sticky-navigation .navbar-header img {
+    /*max-height: 30px;*/
+    -webkit-backface-visibility: hidden;
+}
+header .only-logo .navbar {
+    background: none;
+    padding: 60px;
+}
+
+header .only-logo .navbar .navbar-header {
+    float: none;
+}
+@media screen and (max-width: 480px){
+    header.header {
+        margin-bottom: 40px;
+    }
+    .down-arrow {
+        bottom: -25px !important;
+    }
+}
+/* INTRO */
+
+header .intro-section {
+    margin: auto;
+    /*padding-top:5%;*/
+}
+.gold-text {
+    color: #867450;
+}
+header .intro-section .intro {
+    margin-bottom: 36px;
+    font-size: 46px;
+    text-transform: uppercase;
+}
+header .intro-section p {
+    color: #fff;
+    font-size: 18px;
+}
+header .intro-section h5 {
+    color: #ffffff;
+}
+
+header .intro-section .buttons {
+    margin-top: 35px;
+}
+
+#kane-navigation ul li > a {
+    color: #fff;
+    padding-left: 0;
+    font-size: 14px;
+}
+@media screen and (max-width: 991px){
+    #kane-navigation {
+        margin-top: 20px;
+    }
+
+}
+#kane-navigation {
+    display: block;
+    border-color: transparent;
+    box-shadow: none;
+}
+.down-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    -webkit-animation: bounce 3s infinite ease-in-out;
+}
+@-webkit-keyframes bounce {
+    0%, 20%, 60%, 100%  { -webkit-transform: translateY(0); }
+    40%  { -webkit-transform: translateY(-20px); }
+    80% { -webkit-transform: translateY(-10px); }
+}
+.down-arrow img {
+    height: 35px;
+}
+/*---------------------------------------
+   SECTION:  FEATURES                 
+-----------------------------------------*/
+#bottom-strip,
+#intro-strip {
+    background-color: #867450;
+}
+#bottom-strip h2,
+#intro-strip h2 {
+    color: #333333;
+}
+#bottom-strip p {
+    color: #fff;
+}
+img.holding-image {
+    width: 100%;
+}
+@media screen and (max-width: 576px){
+    img.holding-image {
+        width: 100%;
+    }
+}
+#about-partners {
+    background-color: #f2f2f2;
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/map.png');
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+}
+#about-partners h2 {
+    color: #867450;
+}
+#about-partners p {
+    color: #333333;
+    font-weight: 600;
+}
+#introducing-partner {
+    background-color: #fff;
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/interior.jpg');
+    background-repeat: no-repeat;
+}
+#asset-managers p,
+#white-label p,
+#introducing-partner p,
+#counterparty-relationships p {
+    color: #333333;
+    font-weight: 600;
+}
+#contact-form p {
+    color: #333333;
+}
+span.required {
+    color: #1fb8e2;
+}
+.section-heading {
+    color: #042d5c;
+    font-weight: 500;
+}
+#asset-managers {
+    background-color: #fff;
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/bg-chart.jpg');
+    background-repeat: no-repeat;
+}
+ul.checkmark > li:before {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    padding: 5px 15px;
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/tickmark.png');
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+}
+span {
+    color: #333333;
+}
+#white-label {
+    background-color: #f2f2f2;
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/white-label-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.white-label-devices img {
+    width: auto;
+}
+#white-label span.tag-icon img {
+    margin: auto;
+}
+@media screen and (min-width: 1001px) and (max-width: 1199px){
+    #white-label img.holding-image {
+        width: auto;
+        margin-left: -75%;
+    }
+}
+@media screen and (min-width: 1200px){
+    #white-label img.holding-image {
+        width: auto;
+        margin-left: -45%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #white-label img.holding-image{
+        width: 100%;
+    }
+}
+#counterparty-relationships {
+    background-color: #ffffff;
+    background-image: url('https://cdn-resources.onefinancialmarkets.com/sites/default/files/counterparty-rel-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+#contact-form {
+    background-color: #f5f4f5;
+}
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+}
+#contact-form #broker-before-yes {
+    width: auto;
+}
+#contact-form #broker-before-no {
+    width: auto;
+}
+#contact-form .form-group {
+    clear: both;
+}
+#contact-form .radio {
+    display : inline;
+    padding-left: 0;
+}
+#contact-form label.radio-inline {
+    color: #333333;
+}
+#questions {
+    background-color: #867450;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#questions h2 {
+    text-transform: uppercase;
+    color: #fff;
+}
+#questions a.btn {
+    margin-top: 20px;
+}
+#youtube-video-overlay {
+    background-image: url('https://www.onefinancialmarkets.me/themes/oneresponsivev2/assets/images/homepage-video-overlay.jpg');
+    height: 419px;
+    text-align: center;
+    cursor: pointer;
+}
+@media screen and (max-width: 980px){
+    #youtube-video-overlay {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+    }
+}
+.youtube-video {
+    background-color: #fdfbf9;
+    display: none;
+}
+.youtube-video .inner {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 42.5%;
+}
+.youtube-video .inner #corporate-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-play-icon {
+    background: url('https://www.onefinancialmarkets.me/themes/oneresponsivev2/assets/images/video-icon-off.png');
+    background-repeat: no-repeat;
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+}
+p.line-1,p.line-2 {
+    color: #333;
+    font-size: 30px;
+    margin-top: 10px;
+}
+p.glow {
+    color: #24bce2;
+    font-weight: 300;
+}
+.features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #232323;
+}
+
+.features .features-left {
+    text-align: right;
+    margin-top: 26px;
+    margin-bottom: 80px;
+}
+
+.features .features-left .icon-container {
+    float: right;
+    margin-left: 20px;
+}
+
+.features .features-right {
+    text-align: left;
+    margin-top: 26px;
+    margin-bottom: 80px;
+}
+
+.features .features-right .icon-container {
+    float: left;
+    margin-right: 20px;
+}
+
+.features .feature {
+    margin-bottom: 40px;
+}
+
+.features .feature .icon-container {
+    display: block;
+    min-height: 120px;
+    margin-top: 5px;
+}
+
+.features .feature .icon-container .icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    line-height: 55px;
+    font-size: 18px;
+    text-align: center;
+    -webkit-transition: all ease-in 0.25s;
+            transition: all ease-in 0.25s;
+    -webkit-background-clip: padding-box;
+           -moz-background-clip: padding;
+            background-clip: padding-box;
+}
+
+.features .phone-image {
+    max-width: 250px;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.features .phone-image img {
+    width: 100%;
+}
+
+
+/*---------------------------------------
+   SECTION:  BRIEF                 
+-----------------------------------------*/
+
+.app-brief {
+    padding-top: 110px;
+    padding-bottom: 60px;
+}
+
+.app-brief h2 {
+    margin-bottom: 20px;
+}
+
+.app-brief .phone-image {
+    max-width: 350px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.app-brief .phone-image img {
+    width: 100%;
+}
+
+.app-brief .left-align {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.app-brief .left-align p {
+    display: block;
+    float: none;
+    margin-top: 50px;
+}
+
+.app-brief .left-align .feature-list {
+    margin-top: 40px;
+}
+
+.app-brief .left-align .feature-list li {
+    margin-bottom: 26px;
+}
+
+.app-brief .left-align .feature-list li i {
+    margin-right: 10px;
+    vertical-align: inherit;
+}
+
+
+/* VIDEO */
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe,
+embed,
+object {
+    max-width: 100%;
+}
+
+.video-container {
+    width: 90%;
+    background: transparent !important;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 40px; 
+}
+
+.video {
+    background: transparent !important;
+}
+
+
+/*---------------------------------------
+   SECTION:  TESTIMONIALS                 
+-----------------------------------------*/
+.testimonials {
+    background: url(../images/bg-2.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+            background-size: cover;
+    color: #ffffff;
+}
+
+.testimonials .color-overlay {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.testimonials .feedback {
+    max-width: 750px;
+    margin: auto;
+}
+
+.testimonials .feedback .image {
+    font-size: 24px;
+    border: 2px solid transparent;
+    -webkit-box-shadow: 0px 0px 0px 2px #ffffff;
+            box-shadow: 0px 0px 0px 2px #ffffff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin: auto;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.testimonials .feedback .image img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.testimonials .feedback .message {
+    font-size: 18px;
+    font-style: italic;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.testimonials .feedback .name {
+    margin-top: 15px;
+    font-weight: 400;
+}
+
+.testimonials .feedback .company-info {
+    font-size: 12px;
+}
+
+.testimonials .owl-theme .owl-controls .owl-page span {
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.testimonials .customNavigation a {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/*---------------------------------------
+   SECTION:  SERVICES           
+-----------------------------------------*/
+
+.services {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background: #222222;
+}
+
+.services .single-service {
+    padding-bottom: 60px;
+}
+
+.services .single-service .service-icon {
+    font-size: 80px;
+}
+
+.services .single-service h3 {
+    margin-top: 20px;
+}
+
+
+
+/*---------------------------------------
+   SECTION:  SCREENSHOTS 
+-----------------------------------------*/
+
+.screenshots {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.screenshots .shot {
+    background: #232323;
+    padding: 10px;
+    margin: 13px;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: block;
+}
+
+.screenshots .shot img {
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+/*---------------------------------------
+   SECTION:  PACKAGES | Added on version 1.7      
+-----------------------------------------*/
+
+.packages {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background: #222222;
+}
+
+.single-package {
+    background: #161616;
+    overflow: auto;
+    border: 0px solid #161616;
+    border-radius: 3px;
+    margin-bottom: 60px;
+}
+
+.single-package .price {
+    background: #222222;
+
+}
+
+.single-package .price h2 {
+    color: #FFFFFF;
+}
+.single-package .price .sign {
+    vertical-align: super;
+    font-size: 20px;
+}
+
+.single-package .price .month {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.single-package .package-feature {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.single-package .package-feature > li {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.single-package .package-feature > li > span {
+  margin-right: 7px;
+}
+
+
+/*---------------------------------------
+   SECTION:  DOWNLOAD                 
+-----------------------------------------*/
+
+.download {
+    background: url('../images/bg-3.jpg') no-repeat center fixed;
+    -webkit-background-size: cover;
+            background-size: cover;
+    color: #ffffff;
+}
+
+.download .color-overlay {
+    padding-top: 110px;
+    padding-bottom: 70px;
+}
+
+.download .download-container {
+    padding-bottom: 80px;
+}
+
+.download .subscription-form-container {
+    padding-bottom: 80px;
+}
+
+.download .subscription-form .input-box {
+    height: 57px;
+    padding-left: 20px;
+    width: 320px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: #FFF;
+    border: 2px solid #FFF;
+}
+
+.download .subscription-form .input-box:focus, 
+.download .subscription-form .input-box:active {
+    color: #000;
+    font-weight: 400;
+}
+
+.download .subscription-form .subscription-success,
+.download .subscription-form .subscription-error {
+    display: none;
+}
+
+.download h2 {
+    margin-bottom: 30px;
+}
+
+
+/*---------------------------------------
+   SECTION:  FOOTER                
+-----------------------------------------*/
+footer {
+    background: #f3f3f3;
+}
+
+footer .contact-box {
+    margin-bottom: 78px;
+}
+
+footer .contact-box .contact-button {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    font-size: 30px;
+    line-height: 60px;
+    vertical-align: middle;
+    margin-top: -40px;
+    background: #232323;
+    -webkit-box-shadow: 0px 0px 0px 3px #232323;
+    box-shadow: 0px 0px 0px 3px #232323;
+    -webkit-backface-visibility: hidden;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+footer .contact-box .contact-button:hover {
+    color: #ffffff;
+}
+
+footer .contact-box .expanded-contact-form {
+    margin-top: 40px;
+    display: none;
+}
+
+footer .contact-box .expanded-contact-form .success,
+footer .contact-box .expanded-contact-form .error {
+    display: none;
+}
+
+footer .contact-box .expanded-contact-form .input-box {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 50px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #222222;
+    border: 1px solid #161616;
+}
+
+footer .contact-box .expanded-contact-form .textarea-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #222222;
+    border: 1px solid #161616;
+}
+
+footer .contact-box .expanded-contact-form .textarea-box:active,
+footer .contact-box .expanded-contact-form .textarea-box:focus     {
+    color: #FFF;
+}
+
+footer .social-icons {
+    margin-top: 30px;
+    border-bottom: 1px solid #111111;
+    padding-bottom: 50px;
+}
+
+footer .social-icons li {
+    display: inline-block;
+    margin: 5px;
+}
+
+footer .social-icons li a {
+    font-size: 30px;
+    color: #636363;
+}
+
+footer .copyright {
+    color: #808080;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+span.apply {
+    color: #fff;
+}
+
+/*** -----------
+CUSTOM FOOTER
+ --------------*/
+
+footer .container {
+    background-color: transparent;
+}
+footer .box {
+    margin: 15px 0 0;
+}
+footer .locations {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+footer .payments {
+    background-color: #e8e8e8;
+    padding-top:20px;
+    padding-bottom:50px;
+}
+
+.footer-links {
+    margin-bottom:15px;
+}
+footer .footer-links ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+footer .footer-links ul > li {
+    display: inline-block;
+    padding-right: 5px;
+}
+footer .locations ul {
+    margin: 0;
+    padding: 0;
+}
+
+li.flag {
+    font-size: 13px;
+}
+li.flag:before {
+    background-image: url("https://www.onefinancialmarkets.com/themes/oneresponsivev2/assets/images/flags2.png");
+    background-repeat: no-repeat;
+    width:32px;
+    height:22px;
+    display:block;
+    position:absolute;
+    content: " ";
+    margin-left:-42px;
+    margin-top: 5px;
+}
+.flag-uae:before {
+    background-position: 0 -22px;
+}
+.flag-sa:before {
+    background-position: 0 -44px;
+}
+.flag-za:before {
+    background-position: 0 -66px;
+}
+.flag-cn:before {
+    background-position: 0 -88px;
+}
+.flag-cl:before {
+    background-position: 0 -110px;
+}
+.flag-pe:before {
+    background-position: 0 -132px;
+}
+.flag-kw:before {
+    background-position: 0 -154px;
+}
+li.flag-hk:before{
+    background-image: url("https://www.onefinancialmarkets.com/themes/oneresponsivev2/assets/images/Hong-Kong.png");
+}
+
+li.flag {
+    padding: 0 0 10px 42px;
+    list-style-type: none;
+}
+
+.flag-kw {
+    background-position: 0 -1600px;
+}
+.links li.flag {
+    cursor:pointer;
+}
+
+
+#social {
+    border-top: 1px solid #d9d9d9;
+    color: #999999;
+    padding: 10px 0 30px;
+}
+#social ul {
+    border: 0 solid black;
+    margin: 0;
+    padding: 0;
+}
+#social li {
+    color: #999999;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+#social li.first {
+    margin-right: 5px;
+}
+#social a {
+    display: inline-block;
+    margin: 0 3px 0 0;
+}
+p.withArrow {
+    text-align: right;
+}
+footer .disclaimer1 {
+    font-size: 12.5px;
+    padding: 20px 0px 0;
+}
+
+footer p {
+    color: #333;
+}
+@media (min-width: 992px) {
+    footer #footer2 ul.menu li {
+        border: 0 solid black;
+        display: inline-block;
+        list-style: outside none none;
+        width: 49%;
+        padding-bottom:5px;
+    }
+}
+#awards .item, #payments .item {
+    padding:0 25px;
+    position: relative;
+}
+footer #footer2 ul.menu li a {
+    background-image: url("https://www.onefinancialmarkets.com/themes/oneresponsivev2/assets/images/link-arrow-4.png");
+    background-position: left 0;
+    background-repeat: no-repeat;
+    color: #333333;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 110%;
+    padding: 2px 0 0 15px;
+}
+footer #footer2 ul.menu li a:hover {
+    background-position: left -84px;
+    color: #219ce0;
+}
+footer .disclaimer2 {
+    font-size: 12px;
+}
+footer #awards {
+    font-size: 13px;
+}
+footer #awards .item {
+    text-align: center;
+}
+footer #awards .item img {
+    margin: 0 auto;
+}
+footer #awards .item p {
+    font-size: 11px;
+}
+@media (min-width: 992px) {
+    footer #office-network {
+        max-width: 230px;
+    }
+}
+footer #office-network b {
+    font-size: 14px;
+}
+li.flag {
+    color: #333;
+}
+a.withArrow {
+    background-image: url("https://www.onefinancialmarkets.com/themes/oneresponsivev2/assets/images/link-arrow-4.png");
+    background-position: right 0;
+    background-repeat: no-repeat;
+    border: 0 solid black;
+    color: #333;
+    font-weight: bold;
+    margin: 0 12px 0 0;
+    padding: 0 15px 0 0;
+}
+a.withArrow:hover {
+    background-position: right -84px;
+    color: #219ce0;
+}
+b,strong {
+    color: #333;
+}
+#mkForm input[type=text] {
+    color: #000000;
+}
+#mkForm textarea {
+    color: #000000;
+}
+/** BLUE GRADIENT BUTTON **/
+.blue-gradient-btn {
+    /*width: 100%;*/
+    background-color: #1eb8e2; /* Old browsers */
+    background: -moz-linear-gradient(top, #1eb8e2 0%, #147b97 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1eb8e2 0%,#147b97 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1eb8e2 0%,#147b97 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border: 2px solid #1eb8e2;
+    color: #fff;
+}
+.blue-gradient-btn:hover {
+    border: 2px solid #00DBE2;
+}
+
+/**
+GDPR
+ */
+.position-relative {
+    position: relative;
+}
+.privacy-notice h4 {
+    font-size: 14px;
+}
+.privacy-notice-toggler a {
+    display: block;
+}
+.privacy-notice-body {
+    display: none;
+}
+.privacy-notice-toggler{
+
+    background-image: url("/themes/oneresponsivev2/assets/images/link-arrow-2.png");
+    background-repeat: no-repeat;
+    background-position: 125px -182px;
+}
+.privacy-notice-toggler.open{
+
+    background-image: url("/themes/oneresponsivev2/assets/images/link-arrow-2.png");
+    background-repeat: no-repeat;
+    background-position: 125px 2px;
+}
+.uae-arabic .privacy-notice-toggler{
+
+    background-image: url("/themes/oneresponsivev2/assets/images/link-arrow-2.png");
+    background-repeat: no-repeat;
+    background-position: left  -180px;
+}
+.uae-arabic .privacy-notice-toggler.open{
+
+    background-image: url("/themes/oneresponsivev2/assets/images/link-arrow-2.png");
+    background-repeat: no-repeat;
+    background-position: left 8px;
+}
+.newtooltip {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    background-color: #002e60;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 6px;
+    z-index: 1;
+    visibility: hidden;
+    opacity:0;
+    transition:visibility 0.2s linear,opacity 0.1s linear;
+    -moz-transition: visibility 0.2s linear,opacity 0.1s linear;
+    -webkit-transition: visibility 0.2s linear,opacity 0.1s linear;
+    -o-transition: visibility 0.2s linear,opacity 0.1s linear;
+    /*border-bottom: 1px solid black;*/
+
+}
+.newtooltip.email{
+    bottom: 104%;
+}
+.newtooltip.phone {
+    bottom: 104%;
+}
+.tooltiptext {
+    color: #fff;
+}
+.newtooltip .tooltiptext {
+    /*visibility: hidden;*/
+    display:block;
+
+}
+.newtooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #002e60 transparent transparent transparent;
+}
+.newtooltip .tooltiptext i {
+    color: #ffff;
+    font-size: 20px;
+}
+
+.newtooltip.visible {
+    visibility: visible;
+    opacity: 1;
+}
+input[name=email]:focus .tooltiptext {
+    visibility: visible;
+}
+.sticky-risk-warning-footer {
+    background-color: #e1e1e1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.sticky-risk-warning-footer p {
+    font-size: 14px;
+    color: #4a4a4a;
+}

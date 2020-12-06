@@ -1,0 +1,22 @@
+DELIMITER $$
+
+CREATE PROCEDURE user_deposit_status(
+UserID_auth VARCHAR(250))
+
+
+
+BEGIN
+
+
+SELECT * FROM deposit WHERE UserID = UserID_auth;
+
+
+
+
+END$$
+
+
+
+--------- Execute ---------------
+
+CALL user_deposit_status(13);

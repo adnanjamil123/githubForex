@@ -1,0 +1,33 @@
+DELIMITER $$
+
+CREATE PROCEDURE add_user_national_identity(
+national_identity_name CHAR(100),  
+national_identity_type CHAR(100),  
+national_identity_number BIGINT,
+issue_date DATE, 
+expire_date DATE, 
+UserID_auth VARCHAR(250))
+
+
+
+BEGIN
+
+DECLARE message VARCHAR(50);
+
+UPDATE customer_account SET account_status = 'VERIFIED' WHERE UserID = UserID_auth;
+
+INSERT INTO national_identity(national_identity_name, national_identity_type, national_identity_number, issue_date, expire_date, UserID) VALUES(national_identity_name, national_identity_type, national_identity_number, issue_date, expire_date, UserID_auth);
+
+SET message = 'ACCOUNT IS VERIFIED';
+
+	SELECT message;
+
+
+
+END$$
+
+
+
+--------- Execute ---------------
+
+CALL add_user_national_identity ('ALI JAMIL', 'ID CARD', 5756765767567, '2018-09-02', '2029-09-02', 13);
