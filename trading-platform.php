@@ -31,6 +31,10 @@ $mysqli = new MySQLi('localhost','root','','forextrading');
   }));
 
   </script>
+
+  <script>
+  
+  </script>
 </head>
 <body>
 
